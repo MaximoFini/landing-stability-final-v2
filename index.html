@@ -1,0 +1,3424 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script>
+        !function (t, e) { var o, n, p, r; e.__SV || (window.posthog && window.posthog.__loaded) || (window.posthog = e, e._i = [], e.init = function (i, s, a) { function g(t, e) { var o = e.split("."); 2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } } p || ((p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", p.onerror = function () { p = null }, (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r)); var u = e; for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) { var e = "posthog"; return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e }, u.people.toString = function () { return u.toString(1) + ".people (stub)" }, o = "an ln init xn Cn Br kn In capture Fn nn calculateEventProperties On register register_once register_for_session unregister unregister_for_session Ln getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Dn identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty An Rn createPersonProfile setInternalOrTestUser $n yn jn opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Tn debug Ur Rt getPageViewId captureTraceFeedback captureTraceMetric pn".split(" "), n = 0; n < o.length; n++)g(u, o[n]); e._i.push([i, s, a]) }, e.__SV = 1) }(document, window.posthog || []);
+        window.posthog.init('phc_uuxt8WZvgX3pVDhcmJtYBHhRDSYWP5QjExKNi7ebUq99', {
+            api_host: 'https://us.i.posthog.com',
+            defaults: '2026-05-30',
+            person_profiles: 'identified_only', // or 'always' to create profiles for anonymous users as well
+        })
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KGJ9FVML');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>STABILITY | Comunidad de Entrenamiento en Córdoba</title>
+    <meta name="description"
+        content="Stability: comunidad de entrenamiento en Córdoba con app propia, planificación mensual, registro de progreso y devoluciones semanales de entrenadores.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://stabilityar.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stabilityar.com/">
+    <meta property="og:title" content="STABILITY | Comunidad de Entrenamiento en Córdoba">
+    <meta property="og:description"
+        content="Stability: comunidad de entrenamiento en Córdoba con app propia, planificación mensual, registro de progreso y devoluciones semanales de entrenadores.">
+    <meta property="og:image" content="https://stabilityar.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="STABILITY">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="STABILITY | Comunidad de Entrenamiento en Córdoba">
+    <meta name="twitter:description"
+        content="Stability: comunidad de entrenamiento en Córdoba con app propia, planificación mensual, registro de progreso y devoluciones semanales de entrenadores.">
+    <meta name="twitter:image" content="https://stabilityar.com/assets/images/og-image.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="logo-nuevo-sinfondo.svg">
+    <link rel="alternate icon" href="assets/images/LogoStability.webp">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="logo-nuevo-sinfondo.svg" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/images/features/imagen-planificacion.webp" fetchpriority="high">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ============================================================
+   DESIGN SYSTEM — ver ESTILOS.md (paleta navy/negro/rojo/azul)
+   ============================================================ */
+        :root {
+            --navy: #1a2340;
+            --black: #0a0e1a;
+            --red: #d62f2f;
+            --red-dark: #b32424;
+            --blue: #3b6fd6;
+            --white: #ffffff;
+            --gray-light: #d0d0d0;
+            --gray-dim: rgba(255, 255, 255, 0.55);
+            --header-h: 84px;
+            --bottombar-h: 72px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-family: 'Inter', sans-serif;
+            color: var(--white);
+        }
+
+        body {
+            background-color: var(--black);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button {
+            font-family: inherit;
+            color: inherit;
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .accent-red {
+            color: var(--red);
+        }
+
+        .accent-blue {
+            color: var(--blue);
+        }
+
+        .eyebrow-pill {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 6px 14px;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            padding: 14px 24px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            color: var(--white);
+        }
+
+        .btn-red {
+            background: var(--red);
+        }
+
+        .btn-red:hover {
+            background: var(--red-dark);
+        }
+
+        .btn-blue {
+            background: var(--blue);
+        }
+
+        .btn-blue:hover {
+            background: #2d5bb8;
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        /* ============================================================
+   SLIDES — por defecto (sin JS) es una página normal, con
+   scroll, cada slide es una sección de altura completa.
+   Todo el contenido vive en el HTML: indexable siempre.
+   ============================================================ */
+        .slide {
+            position: relative;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: flex-end;
+            padding: 32px 24px 64px;
+            overflow: hidden;
+            background: linear-gradient(160deg, var(--navy) 0%, var(--black) 70%);
+        }
+
+        .slide::before {
+            /* diagonal light streak, estilo posts reales */
+            content: '';
+            position: absolute;
+            inset: -20% -40%;
+            background: linear-gradient(115deg, transparent 40%, rgba(214, 47, 47, 0.18) 48%, transparent 58%);
+            pointer-events: none;
+        }
+
+        .slide-bg-photo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .slide-bg-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 14, 26, 0.95) 10%, rgba(10, 14, 26, 0.35) 55%, rgba(10, 14, 26, 0.55) 100%);
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        /* Pointer-events pass-through: solo lo marcado .interactive captura clicks;
+   el resto deja pasar el tap hacia las tap-zones de navegación. */
+        .slide-content,
+        .slide-content * {
+            pointer-events: none;
+        }
+
+        .slide-content .interactive,
+        .slide-content .interactive * {
+            pointer-events: auto;
+        }
+
+        .slide-kicker {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: var(--gray-light);
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        .slide-title {
+            font-size: 34px;
+            margin-bottom: 16px;
+        }
+
+        .slide-title.lg {
+            font-size: 40px;
+        }
+
+        .slide-text {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--gray-light);
+            line-height: 1.55;
+            margin-bottom: 20px;
+        }
+
+        /* --- Hero --- */
+        #slide-hero {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #slide-hero .slide-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-logo-img {
+            width: 206px;
+            height: 206px;
+            margin: 0 auto 24px auto;
+            display: block;
+        }
+
+        .gear-rotate {
+            transform-origin: 50% 50%;
+            transform-box: fill-box;
+            animation: rotateGear 12s linear infinite;
+            will-change: transform;
+        }
+
+        @keyframes rotateGear {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .gear-rotate {
+                animation: none;
+            }
+        }
+
+        #slide-contacto .hero-logo-img {
+            width: 165px;
+            height: 165px;
+            margin: 0 auto 14px auto;
+        }
+
+        .testi-slide-logo {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+
+        #slide-hero .eyebrow-pill {
+            margin: 10px auto 0 auto;
+        }
+
+        /* --- Feature visual illustration --- */
+        .feature-visual {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64%;
+            pointer-events: none;
+        }
+
+        .feature-visual svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .feature-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -58%);
+            width: 78%;
+            max-width: 320px;
+            border-radius: 20px;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+            display: block;
+            object-fit: contain;
+            /* fade suave desde la imagen misma — empieza opaca arriba, desvanece abajo */
+            -webkit-mask-image: linear-gradient(to bottom,
+                    black 0%,
+                    black 58%,
+                    rgba(0, 0, 0, 0.6) 75%,
+                    rgba(0, 0, 0, 0.15) 88%,
+                    transparent 100%);
+            mask-image: linear-gradient(to bottom,
+                    black 0%,
+                    black 58%,
+                    rgba(0, 0, 0, 0.6) 75%,
+                    rgba(0, 0, 0, 0.15) 88%,
+                    transparent 100%);
+        }
+
+        /* capa adicional de refuerzo sobre toda la zona visual */
+        .feature-visual::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 75%;
+            background: linear-gradient(to top,
+                    var(--black) 0%,
+                    rgba(10, 14, 26, 0.65) 25%,
+                    rgba(10, 14, 26, 0.2) 50%,
+                    transparent 100%);
+            pointer-events: none;
+        }
+
+        /* --- Team --- */
+        .team-slide {
+            align-items: flex-end;
+        }
+
+        /* Fondo oscuro detrás de la foto transparente de Juan */
+        #slide-team-juan {
+            background: radial-gradient(ellipse at 60% 15%, #1e2d50 0%, #0d1220 50%, #0a0e1a 100%);
+        }
+
+        #slide-team-juan .slide-bg-photo {
+            object-fit: cover;
+            object-position: 46.5% top;
+        }
+
+        .juan-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 60% 15%, #1e2d50 0%, #0d1220 50%, #0a0e1a 100%);
+            z-index: 0;
+        }
+
+        #slide-team-juan .slide-bg-overlay {
+            z-index: 2;
+        }
+
+        #slide-team-juan .slide-bg-photo {
+            z-index: 1;
+        }
+
+        .team-avatar-fallback {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--navy);
+            border: 3px solid var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .team-name {
+            font-size: 36px;
+            margin-bottom: 6px;
+        }
+
+        .team-specialty {
+            display: inline-block;
+            background: var(--blue);
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 5px 12px;
+            border-radius: 4px;
+            margin-bottom: 14px;
+        }
+
+        .team-location {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--gray-light);
+            margin-top: 14px;
+        }
+
+        .team-location svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--gray-light);
+            flex-shrink: 0;
+        }
+
+        /* --- Testimonios (agrupados de a 2-3 por historia, sin scroll) --- */
+        .testi-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .testi-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        .testi-card-avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--blue);
+            flex-shrink: 0;
+        }
+
+        .testi-card-name {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: none;
+            margin-bottom: 4px;
+            color: var(--white);
+        }
+
+        .testi-card-quote {
+            font-size: 14.5px;
+            font-style: italic;
+            color: var(--gray-light);
+            line-height: 1.42;
+        }
+
+        @media (max-width: 380px) {
+            .testi-card-quote {
+                font-size: 13.5px;
+                line-height: 1.38;
+            }
+
+            .testi-card-name {
+                font-size: 14px;
+            }
+        }
+
+        /* --- Registro --- */
+        .form-group {
+            margin-bottom: 14px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--gray-light);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .form-input {
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            color: var(--white);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 8px;
+            padding: 13px 16px;
+            outline: none;
+        }
+
+        .form-input:focus {
+            border-color: var(--blue);
+        }
+
+        .form-input::placeholder {
+            color: var(--gray-dim);
+        }
+
+        .objective-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .objective-btn {
+            font-family: 'Inter', sans-serif;
+            font-size: 13.5px;
+            font-weight: 600;
+            line-height: 1.3;
+            text-align: center;
+            color: var(--white);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 8px;
+            padding: 16px 10px;
+            cursor: pointer;
+            transition: background 0.15s ease, border-color 0.15s ease;
+        }
+
+        .objective-btn.selected {
+            background: rgba(214, 47, 47, 0.22);
+            border-color: var(--red);
+        }
+
+        .error-message {
+            font-size: 12px;
+            color: #ff8080;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 6px;
+        }
+
+        .saved-banner {
+            display: none;
+            background: rgba(255, 255, 255, 0.06);
+            border-left: 3px solid var(--blue);
+            border-radius: 8px;
+            padding: 18px;
+        }
+
+        .saved-text {
+            font-size: 15px;
+            color: var(--white);
+            line-height: 1.5;
+        }
+
+        .saved-text .saved-name {
+            color: var(--blue);
+            font-weight: 700;
+        }
+
+        .saved-text .saved-objective {
+            color: var(--red);
+            font-weight: 700;
+        }
+
+        .reset-btn {
+            margin-top: 10px;
+            background: none;
+            border: none;
+            color: var(--gray-light);
+            font-size: 12px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* --- Contacto --- */
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .contact-list .btn {
+            width: 100%;
+        }
+
+        /* --- Feature copy dinámico según objetivo elegido --- */
+        .slide-text[data-objective] {
+            display: none;
+        }
+
+        .slide-text[data-objective].active-objective {
+            display: block;
+        }
+
+        /* ============================================================
+   CHROME DE HISTORIA (barra de progreso, header, bottom bar)
+   Ocultos por defecto: sólo aparecen cuando JS activa el modo
+   historia. Sin JS la página es una landing normal con scroll.
+   ============================================================ */
+        .story-progress,
+        .story-header,
+        .story-bottombar,
+        .tap-zone {
+            display: none;
+        }
+
+        .stories-viewport {
+            position: relative;
+        }
+
+        .tap-zone {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 30%;
+            background: transparent;
+            border: 0;
+            z-index: 5;
+            padding: 0;
+            cursor: pointer;
+        }
+
+        .tap-zone--prev {
+            left: 0;
+        }
+
+        .tap-zone--next {
+            left: 30%;
+            width: 70%;
+        }
+
+        .story-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 41;
+            gap: 4px;
+            padding: 10px 10px 0;
+        }
+
+        .story-progress .seg {
+            flex: 1;
+            height: 3px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+        }
+
+        .story-progress .seg-fill {
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: var(--white);
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .story-progress .seg.done .seg-fill {
+            transform: scaleX(1);
+        }
+
+        .story-progress .seg.active .seg-fill {
+            animation-name: storyFill;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+
+        .story-progress .seg.active.paused .seg-fill {
+            animation-play-state: paused;
+        }
+
+        @keyframes storyFill {
+            from {
+                transform: scaleX(0);
+            }
+
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        .story-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 14px 22px;
+            background: linear-gradient(to bottom, rgba(10, 14, 26, 0.65) 0%, rgba(10, 14, 26, 0.35) 55%, transparent 100%);
+        }
+
+        .story-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: none;
+            border: 0;
+            cursor: pointer;
+            padding: 6px 4px;
+            min-width: 0;
+        }
+
+        .story-profile img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--white);
+            padding: 2px;
+            flex-shrink: 0;
+        }
+
+        .story-profile .handle {
+            font-size: 14px;
+            font-weight: 700;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
+        }
+
+        .story-profile .elapsed {
+            font-size: 13px;
+            color: var(--gray-light);
+            margin-left: 4px;
+            font-weight: 400;
+            text-transform: none;
+            white-space: nowrap;
+        }
+
+        .story-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            flex-shrink: 0;
+        }
+
+        .story-close,
+        .story-pause,
+        .story-music {
+            background: none;
+            border: 0;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .story-close svg,
+        .story-pause svg,
+        .story-music svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--white);
+        }
+
+        .story-music.is-playing svg {
+            fill: var(--red);
+            animation: pulseMusic 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulseMusic {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        .story-bottombar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 40;
+            align-items: center;
+            gap: 12px;
+            padding: 14px;
+            padding-bottom: max(14px, env(safe-area-inset-bottom));
+            background: linear-gradient(to top, rgba(10, 14, 26, 0.85), transparent);
+        }
+
+        .story-msg-input {
+            flex: 1;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 22px;
+            padding: 4px 6px 4px 18px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            pointer-events: auto !important;
+        }
+
+        .msg-input-field {
+            flex: 1;
+            min-width: 0;
+            background: transparent;
+            border: 0;
+            outline: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: var(--white);
+            padding: 7px 0;
+            -webkit-user-select: text !important;
+            user-select: text !important;
+            pointer-events: auto !important;
+        }
+
+        .msg-input-field::placeholder {
+            color: var(--gray-dim);
+        }
+
+        .msg-send-btn {
+            background: none;
+            border: 0;
+            width: 0;
+            height: 34px;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: opacity 0.2s ease, width 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+            transform: scale(0.7);
+            overflow: hidden;
+        }
+
+        .msg-send-btn.has-text {
+            width: 34px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: scale(1);
+        }
+
+        .msg-send-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--white);
+        }
+
+        .msg-send-btn:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+
+        .story-icon-btn {
+            background: none;
+            border: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .story-icon-btn svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--white);
+            transition: transform 0.2s ease;
+        }
+
+        .story-icon-btn.liked svg {
+            fill: var(--red);
+        }
+
+        .story-icon-btn.liked svg {
+            animation: heartPop 0.35s ease;
+        }
+
+        @keyframes heartPop {
+            0% {
+                transform: scale(1);
+            }
+
+            35% {
+                transform: scale(1.35);
+            }
+
+            60% {
+                transform: scale(0.9);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .share-toast {
+            position: fixed;
+            bottom: calc(var(--bottombar-h) + 14px);
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: var(--white);
+            color: var(--black);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 20px;
+            z-index: 50;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .share-toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ============================================================
+   MODO HISTORIA ACTIVO (JS habilitado)
+   ============================================================ */
+        body.js-stories {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body.js-stories html {
+            height: 100%;
+        }
+
+        body.js-stories .stories-viewport {
+            position: fixed;
+            inset: 0;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            background: var(--black);
+        }
+
+        body.js-stories .story-progress,
+        body.js-stories .story-header,
+        body.js-stories .story-bottombar,
+        body.js-stories .tap-zone {
+            display: flex;
+        }
+
+        body.js-stories .slide {
+            position: absolute;
+            inset: 0;
+            min-height: 0;
+            display: none;
+            opacity: 0;
+            padding-top: calc(var(--header-h) + 12px);
+            padding-bottom: calc(var(--bottombar-h) + 20px);
+        }
+
+        body.js-stories .slide.is-active {
+            display: flex;
+            opacity: 1;
+            animation: slideIn 0.25s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: scale(1.02);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            body.js-stories .slide.is-active {
+                animation: none;
+            }
+        }
+
+        body.js-stories .tap-zone {
+            top: var(--header-h);
+            bottom: var(--bottombar-h);
+        }
+
+        /* Desktop: centrar el "teléfono" de historia */
+        @media (min-width: 640px) {
+            body.js-stories .stories-viewport {
+                max-width: 420px;
+                left: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 20px 60px rgba(0, 0, 0, 0.6);
+            }
+
+            body.js-stories .story-progress,
+            body.js-stories .story-header,
+            body.js-stories .story-bottombar {
+                width: 420px;
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+            }
+
+            body.js-stories .share-toast {
+                max-width: 420px;
+            }
+
+            body {
+                background: var(--black);
+            }
+        }
+
+        /* --- Sticker de Encuesta Interactiva (Poll Sticker) --- */
+        .poll-sticker {
+            background: rgba(26, 35, 64, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px auto;
+            width: calc(100% - 10px);
+            max-width: 380px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .poll-question {
+            font-size: 17px;
+            font-weight: 800;
+            color: var(--white);
+            text-align: center;
+            line-height: 1.3;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+        }
+
+        .poll-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .poll-option {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.07);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 13px 16px;
+            color: var(--white);
+            font-size: 13.5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.1s ease;
+            overflow: hidden;
+            width: 100%;
+            text-align: left;
+        }
+
+        .poll-option:active {
+            transform: scale(0.98);
+        }
+
+        .poll-option-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            background: rgba(255, 255, 255, 0.15);
+            transition: width 0.7s cubic-bezier(0.1, 0.8, 0.2, 1);
+            z-index: 1;
+        }
+
+        .poll-option-text {
+            position: relative;
+            z-index: 2;
+            pointer-events: none;
+            line-height: 1.2;
+        }
+
+        .poll-option-percent {
+            position: relative;
+            z-index: 2;
+            font-weight: 800;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.1, 0.8, 0.2, 1);
+            pointer-events: none;
+        }
+
+        /* Estado de votado: permite re-votar libremente */
+        .poll-sticker.has-voted .poll-option {
+            pointer-events: auto;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .poll-sticker.has-voted .poll-option:hover {
+            border-color: rgba(255, 255, 255, 0.35);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .poll-sticker.has-voted .poll-option.selected {
+            border-color: var(--red);
+            box-shadow: 0 0 12px rgba(214, 47, 47, 0.35);
+            background: rgba(214, 47, 47, 0.08);
+        }
+
+        .poll-sticker.has-voted .poll-option.selected .poll-option-fill {
+            background: rgba(214, 47, 47, 0.45);
+        }
+
+        .poll-sticker.has-voted .poll-option-percent {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .poll-reset-btn {
+            background: none;
+            border: none;
+            color: var(--gray-light);
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: underline;
+            cursor: pointer;
+            padding: 4px 8px;
+            margin-top: 2px;
+            opacity: 0.85;
+            transition: opacity 0.2s ease, color 0.2s ease;
+        }
+
+        .poll-reset-btn:hover {
+            opacity: 1;
+            color: var(--white);
+        }
+
+        @media (max-width: 767px) {
+            .slide-title {
+                font-size: 28px;
+            }
+
+            .slide-title.lg {
+                font-size: 32px;
+            }
+
+            .team-name {
+                font-size: 30px;
+            }
+        }
+
+        /* Pantallas muy bajas (ej. iPhone SE 1ra gen, 320x568): achicar el testimonio
+   más largo (Joaco) para que siga entrando sin scroll. */
+        @media (max-height: 700px) {
+            body.js-stories .testi-group-slide {
+                padding-top: calc(var(--header-h) + 4px);
+                padding-bottom: calc(var(--bottombar-h) + 8px);
+            }
+
+            .testi-cards {
+                gap: 8px;
+            }
+
+            .testi-cards .slide-kicker {
+                margin-bottom: 6px;
+            }
+
+            .testi-card {
+                gap: 10px;
+            }
+
+            .testi-card-avatar {
+                width: 38px;
+                height: 38px;
+                border-width: 1.5px;
+            }
+
+            .testi-card-name {
+                font-size: 13.5px;
+                margin-bottom: 2px;
+            }
+
+            .testi-card-quote {
+                font-size: 12.5px;
+                line-height: 1.32;
+            }
+
+            .testi-slide-logo {
+                width: 46px;
+                height: 46px;
+                margin: 0 auto 12px auto;
+            }
+
+            /* La historia de contacto junta form + CTA + canales secundarios: en
+       pantallas muy bajas, ajustar con mejor legibilidad. */
+            body.js-stories #slide-contacto {
+                padding-top: calc(var(--header-h) + 4px);
+                padding-bottom: calc(var(--bottombar-h) + 8px);
+            }
+
+            #slide-contacto .hero-logo-img {
+                width: 95px;
+                height: 95px;
+                margin: 0 auto 8px auto;
+            }
+
+            #slide-contacto .slide-kicker {
+                margin-bottom: 6px;
+            }
+
+            #slide-contacto .slide-title {
+                font-size: 22px;
+                margin-bottom: 6px;
+            }
+
+            #slide-contacto .slide-text {
+                font-size: 13px;
+                margin-bottom: 10px;
+                line-height: 1.35;
+            }
+
+            #slide-contacto .form-group {
+                margin-bottom: 8px;
+            }
+
+            #slide-contacto .form-label {
+                font-size: 12px;
+                margin-bottom: 4px;
+            }
+
+            #slide-contacto .form-input {
+                padding: 9px 12px;
+                font-size: 14px;
+            }
+
+            #slide-contacto textarea.form-input {
+                min-height: 38px;
+            }
+
+            #slide-contacto .submit-btn {
+                padding: 10px 18px;
+                font-size: 13.5px;
+                margin-top: 2px;
+            }
+
+            #slide-contacto .btn-blue.interactive {
+                padding: 10px 18px;
+                font-size: 13.5px;
+                margin-top: 8px !important;
+            }
+
+            /* Historia de registro: nombre + 4 botones de objetivo, también compacta
+       en pantallas muy bajas. */
+            #slide-registro .slide-title {
+                font-size: 22px;
+                margin-bottom: 4px;
+            }
+
+            #slide-registro .slide-text {
+                font-size: 13px;
+                margin-bottom: 12px;
+            }
+
+            #slide-registro .form-group {
+                margin-bottom: 8px;
+            }
+
+            #slide-registro .form-label {
+                margin-bottom: 4px;
+            }
+
+            #slide-registro .form-input {
+                padding: 10px 14px;
+            }
+
+            #slide-registro .objective-grid {
+                gap: 7px;
+            }
+
+            #slide-registro .objective-btn {
+                padding: 10px 8px;
+                font-size: 12px;
+            }
+
+            #slide-registro .submit-btn {
+                padding: 10px 20px;
+                margin-top: 2px;
+            }
+
+            /* Poll sticker responsive adjustments */
+            .poll-sticker {
+                padding: 12px 14px;
+                margin: 10px auto;
+                gap: 8px;
+            }
+
+            .poll-question {
+                font-size: 14.5px;
+                margin-bottom: 2px;
+            }
+
+            .poll-option {
+                padding: 10px 13px;
+                font-size: 12.5px;
+                border-radius: 8px;
+            }
+
+            .poll-option-percent {
+                font-size: 13px;
+            }
+        }
+
+        /* --- FAQ Slide & Accordion --- */
+        .faq-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .faq-item {
+            background: rgba(26, 35, 64, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+            position: relative;
+        }
+
+        .faq-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--blue);
+            opacity: 0;
+            transition: opacity 0.25s ease, background-color 0.25s ease;
+        }
+
+        .faq-item:nth-child(even)::before {
+            background: var(--red);
+        }
+
+        .faq-item.is-open {
+            background: rgba(26, 35, 64, 0.75);
+            border-color: rgba(255, 255, 255, 0.22);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        .faq-item.is-open::before {
+            opacity: 1;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 12px 14px;
+            background: transparent;
+            border: none;
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            text-align: left;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--white);
+        }
+
+        .faq-icon {
+            width: 18px;
+            height: 18px;
+            fill: var(--gray-dim);
+            flex-shrink: 0;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), fill 0.25s ease;
+        }
+
+        .faq-item.is-open .faq-icon {
+            transform: rotate(180deg);
+            fill: var(--blue);
+        }
+
+        .faq-item:nth-child(even).is-open .faq-icon {
+            fill: var(--red);
+        }
+
+        .faq-answer {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-item.is-open .faq-answer {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-answer-inner {
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-4px);
+            transition: opacity 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+            padding: 0 14px;
+            font-size: 14px;
+            color: var(--gray-light);
+            line-height: 1.48;
+        }
+
+        .faq-item.is-open .faq-answer-inner {
+            opacity: 1;
+            transform: translateY(0);
+            padding: 0 14px 12px 14px;
+        }
+
+        @media (max-height: 700px) {
+            body.js-stories #slide-faq {
+                padding-top: calc(var(--header-h) + 4px);
+                padding-bottom: calc(var(--bottombar-h) + 8px);
+            }
+
+            #slide-faq .slide-kicker {
+                margin-bottom: 4px;
+            }
+
+            #slide-faq .slide-title {
+                font-size: 22px;
+                margin-bottom: 6px;
+            }
+
+            .faq-container {
+                gap: 6px;
+                margin-top: 6px;
+            }
+
+            .faq-question {
+                padding: 9px 11px;
+                font-size: 12.5px;
+            }
+
+            .faq-answer-inner {
+                font-size: 12.5px;
+                line-height: 1.38;
+            }
+
+            .faq-item.is-open .faq-answer-inner {
+                padding: 0 11px 9px 11px;
+            }
+        }
+
+        /* Anti-zoom, anti-desencuadre, control de overscroll y prevención estricta de selección de texto en long press */
+        html,
+        body,
+        .stories-viewport,
+        .slide,
+        .slide-content,
+        *,
+        *::before,
+        *::after {
+            overscroll-behavior: none;
+            overscroll-behavior-y: contain;
+            touch-action: manipulation;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        img,
+        svg {
+            -webkit-user-drag: none;
+            pointer-events: none;
+        }
+
+        .interactive img,
+        .interactive svg,
+        button img,
+        button svg,
+        a img,
+        a svg {
+            pointer-events: auto;
+        }
+
+        /* Restaurar completamente inputs y textareas para recibir teclado virtual en mobile */
+        input,
+        textarea {
+            -webkit-user-select: text !important;
+            -moz-user-select: text !important;
+            -ms-user-select: text !important;
+            user-select: text !important;
+            /* pan-y: permite scroll vertical nativo y abre teclado correctamente */
+            touch-action: pan-y !important;
+            -webkit-touch-callout: default !important;
+            pointer-events: auto !important;
+            cursor: text !important;
+        }
+
+        /* Contenedor del mensaje: nunca debe bloquear interacción del input */
+        .story-msg-input {
+            touch-action: auto !important;
+            pointer-events: auto !important;
+        }
+
+        .story-msg-input * {
+            touch-action: auto !important;
+            pointer-events: auto !important;
+        }
+
+        /* Transición suave para ocultar las barras de navegación cuando la historia está PAUSADA */
+        body.js-stories .story-progress,
+        body.js-stories .story-header,
+        body.js-stories .story-bottombar {
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+        }
+
+        body.js-stories .stories-viewport.is-holding-pause .story-progress,
+        body.js-stories .stories-viewport.is-holding-pause .story-header,
+        body.js-stories .stories-viewport.is-holding-pause .story-bottombar {
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+        }
+
+        /* Spinner de carga para precarga y media pesada (Skeleton / Loader) */
+        .story-loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 42px;
+            height: 42px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            border-top-color: var(--red);
+            border-radius: 50%;
+            animation: storySpin 0.7s linear infinite;
+            z-index: 40;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .story-loader.is-loading {
+            opacity: 1;
+        }
+
+        @keyframes storySpin {
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Corazón flotante animado para Doble Tap Like */
+        .floating-heart {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            margin-left: -45px;
+            margin-top: -45px;
+            pointer-events: none;
+            z-index: 99;
+            animation: floatHeartPop 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .floating-heart svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--red);
+            filter: drop-shadow(0 4px 14px rgba(214, 47, 47, 0.6));
+        }
+
+        @keyframes floatHeartPop {
+            0% {
+                transform: scale(0) rotate(-12deg);
+                opacity: 0;
+            }
+
+            40% {
+                transform: scale(1.25) rotate(0deg);
+                opacity: 1;
+            }
+
+            70% {
+                transform: scale(1) translateY(-25px);
+                opacity: 0.85;
+            }
+
+            100% {
+                transform: scale(0.75) translateY(-50px);
+                opacity: 0;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "Stability",
+  "description": "Comunidad de entrenamiento en Córdoba, Argentina con app propia: planificación mensual, registro de progreso, videos de ejercicios y devoluciones semanales de entrenadores.",
+  "url": "https://stabilityar.com/",
+  "telephone": "+5493512240889",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Córdoba",
+    "addressCountry": "AR"
+  },
+  "areaServed": "Córdoba, Argentina",
+  "sameAs": [
+    "https://instagram.com/stability.ar"
+  ]
+}
+</script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Importan mi edad/peso/altura?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, solamente importan las ganas que tengas de empezar. Tus ganas definen hacia dónde vamos y hasta dónde podemos llegar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo entrenar en cualquier lugar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, desde cualquier parte del mundo. Solamente necesitás conexión a internet y tu celular."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si nunca entrené antes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mejor todavía. El plan se arma desde donde estás vos, no desde un estándar. La progresión es parte del método."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo es la comunicación con mi entrenador?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Directa y constante a través de la app y WhatsApp, así nunca quedás con dudas sobre qué hacer o cómo hacerlo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito equipamiento o gimnasio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No es necesario, podemos adaptar el entrenamiento a lo que tengas disponible: ya sea en tu casa o en el gimnasio."
+      }
+    }
+  ]
+}
+</script>
+    <!-- Vercel Web Analytics -->
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGJ9FVML" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="stories-viewport" id="storiesViewport">
+
+        <!-- Indicador de Carga (Skeleton / Spinner Loader) -->
+        <div class="story-loader" id="storyLoader"></div>
+
+        <!-- Barra de progreso segmentada -->
+        <div class="story-progress" id="storyProgress" aria-hidden="true"></div>
+
+        <!-- Header tipo Historia -->
+        <div class="story-header">
+            <button class="story-profile interactive" id="profileBtn"
+                aria-label="Abrir el perfil de Instagram de Stability (se abre en una pestaña nueva)">
+                <img src="logo-nuevo-sinfondo.svg" alt="STABILITY Logo" width="28" height="28" decoding="async"
+                    onerror="this.src='assets/images/logo-stability.svg'">
+                <span class="handle">stability.ar</span>
+                <span class="elapsed" id="elapsedLabel">ahora</span>
+            </button>
+            <div class="story-header-actions">
+                <button class="story-music interactive" id="musicBtn" aria-label="Activar o desactivar música de fondo"
+                    aria-pressed="false">
+                    <svg viewBox="0 0 24 24" id="musicIcon">
+                        <path
+                            d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+                    </svg>
+                </button>
+                <button class="story-pause interactive" id="pauseBtn" aria-label="Pausar historia" aria-pressed="false">
+                    <svg viewBox="0 0 24 24" id="pauseIcon">
+                        <path d="M6 5h4v14H6zM14 5h4v14h-4z" />
+                    </svg>
+                </button>
+                <button class="story-close interactive" id="closeBtn" aria-label="Volver al inicio de la historia">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M18.3 5.71L12 12.01l-6.3-6.3-1.42 1.42 6.3 6.3-6.3 6.3 1.42 1.42 6.3-6.3 6.3 6.3 1.42-1.42-6.3-6.3 6.3-6.3z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Elemento de Audio para Música de Fondo -->
+        <audio id="bgMusic" loop preload="none">
+            <source
+                src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=lofi-study-112191.mp3"
+                type="audio/mpeg">
+        </audio>
+
+        <main id="slidesContainer">
+
+            <!-- ============ 0. HERO ============ -->
+            <section class="slide" id="slide-hero" data-duration="6000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <div class="slide-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 209.00 213.00"
+                        class="hero-logo-img" role="img" aria-label="STABILITY Logo">
+                        <g stroke-width="2.00" fill="none" stroke-linecap="butt">
+                            <path stroke="#121f2f" vector-effect="non-scaling-stroke"
+                                d="M 31.66 159.19 Q 31.44 159.70 31.47 160.22" />
+                            <path stroke="#121f2f" vector-effect="non-scaling-stroke"
+                                d="M 12.89 161.04 L 12.87 159.21" />
+                        </g>
+                        <!-- Tuerca giratoria -->
+                        <g class="gear-rotate">
+                            <path fill="#1c3355"
+                                d="M 114.50 75.37 Q 102.16 88.43 84.71 90.64 C 71.16 92.35 58.12 86.55 49.07 76.16 Q 47.60 74.47 47.49 72.52 A 1.81 1.81 0.0 0 1 48.81 70.68 L 56.87 68.43 A 2.09 2.08 -1.7 0 0 58.34 66.88 Q 59.99 59.49 63.50 54.18 Q 63.66 53.95 64.83 51.61 A 0.66 0.66 0.0 0 0 64.81 51.00 L 60.05 42.75 A 0.96 0.96 0.0 0 1 60.20 41.58 L 68.80 32.98 A 0.82 0.81 37.2 0 1 69.79 32.85 L 78.24 37.73 A 0.65 0.64 42.8 0 0 78.92 37.71 Q 83.72 34.49 89.64 32.38 C 91.30 31.79 93.33 31.55 95.27 30.82 A 0.87 0.86 86.9 0 0 95.81 30.21 L 97.99 21.12 A 0.70 0.69 -83.0 0 1 98.66 20.59 L 111.52 20.59 A 0.45 0.44 -7.7 0 1 111.95 20.91 L 114.59 30.32 A 0.81 0.80 88.1 0 0 115.20 30.90 Q 123.77 32.81 131.15 37.66 A 0.77 0.77 0.0 0 0 131.96 37.68 L 140.09 32.99 A 1.22 1.21 52.3 0 1 141.55 33.18 L 150.14 41.77 A 0.81 0.81 0.0 0 1 150.25 42.78 Q 147.88 46.59 145.54 50.51 Q 145.35 50.82 145.36 52.29 A 0.57 0.57 0.0 0 1 144.94 52.85 L 130.06 57.02 A 0.95 0.93 -30.2 0 1 129.16 56.79 C 126.63 54.36 124.57 52.33 122.18 50.87 Q 110.59 43.80 98.30 46.59 C 85.40 49.53 75.98 59.50 73.55 72.52 Q 72.93 75.86 73.12 78.27 A 0.98 0.98 0.0 0 0 73.60 79.04 C 81.75 83.75 92.61 83.72 101.61 80.92 Q 107.92 78.95 114.20 75.01 A 0.24 0.24 0.0 0 1 114.50 75.37 Z" />
+                            <path fill="#c41b1a"
+                                d="M 151.39 66.93 L 152.44 67.97 A 2.56 2.52 74.1 0 0 153.62 68.64 L 161.81 70.60 A 0.98 0.98 0.0 0 1 162.56 71.55 L 162.56 83.88 A 0.75 0.75 0.0 0 1 162.01 84.60 L 152.91 87.15 A 1.14 1.14 0.0 0 0 152.10 88.00 Q 150.14 96.47 145.69 103.43 A 1.29 1.28 -43.4 0 0 145.65 104.77 L 150.40 113.00 A 0.73 0.73 0.0 0 1 150.29 113.88 L 141.44 122.72 A 0.89 0.88 -52.8 0 1 140.37 122.87 L 132.18 118.14 A 1.16 1.14 43.1 0 0 130.97 118.17 Q 123.51 122.96 114.94 124.89 A 0.90 0.89 -89.5 0 0 114.26 125.56 L 112.07 134.70 A 0.83 0.83 0.0 0 1 111.26 135.34 L 98.81 135.34 A 0.61 0.60 81.6 0 1 98.23 134.90 L 95.52 125.22 A 0.55 0.53 3.7 0 0 95.19 124.86 C 93.60 124.25 91.41 123.97 90.04 123.49 Q 84.26 121.43 78.98 118.14 A 0.89 0.88 -43.4 0 0 78.06 118.12 L 69.68 122.96 A 0.68 0.68 0.0 0 1 68.86 122.85 L 59.90 113.89 A 0.76 0.75 -53.0 0 1 59.78 112.99 L 64.84 104.23 A 0.44 0.44 0.0 0 0 64.82 103.76 Q 60.63 97.77 58.65 90.48 A 0.35 0.34 -84.2 0 1 59.14 90.08 Q 75.85 98.81 94.14 93.33 C 105.65 89.88 115.49 81.95 123.31 73.08 A 0.94 0.93 -48.7 0 0 123.23 71.77 L 116.88 66.16 A 0.47 0.47 0.0 0 1 117.07 65.36 L 147.45 56.86 A 0.60 0.59 86.6 0 1 148.20 57.53 L 143.22 88.44 A 0.43 0.42 -64.4 0 1 142.52 88.69 L 136.20 83.10 A 1.13 1.13 0.0 0 0 134.60 83.20 C 124.70 94.59 112.69 102.64 97.87 105.49 C 95.43 105.96 93.37 105.76 91.39 106.39 A 0.26 0.26 0.0 0 0 91.37 106.87 C 108.94 114.51 127.45 106.69 134.95 89.33 A 0.74 0.74 0.0 0 1 136.12 89.07 L 145.67 97.52 A 0.45 0.45 0.0 0 0 146.41 97.25 L 151.29 66.96 A 0.06 0.06 0.0 0 1 151.39 66.93 Z" />
+                        </g>
+                        <!-- Texto y detalles fijos -->
+                        <g fill="#1c3355">
+                            <path
+                                d="M 31.66 159.19 Q 31.44 159.70 31.47 160.22 L 26.16 160.22 A 0.99 0.99 0.0 0 1 25.32 159.75 C 23.79 157.25 19.76 156.20 19.61 159.95 A 2.58 2.27 8.7 0 0 21.59 162.32 C 24.41 162.99 30.67 164.75 31.62 168.08 Q 32.92 172.65 30.38 175.37 C 26.61 179.39 19.83 179.18 15.51 176.10 Q 13.63 174.76 12.49 170.79 A 0.23 0.23 0.0 0 1 12.71 170.50 L 19.11 170.50 A 0.33 0.32 -8.5 0 1 19.42 170.72 Q 20.59 174.53 24.92 172.57 A 1.20 1.19 -3.6 0 0 25.56 171.85 Q 26.23 169.70 23.95 168.84 Q 19.92 167.32 17.46 166.45 Q 13.64 165.08 12.89 161.04 L 12.87 159.21 Q 14.08 153.83 19.25 152.95 C 24.66 152.02 30.17 153.23 31.66 159.19 Z" />
+                            <path
+                                d="M 185.85 163.14 Q 186.06 163.14 186.13 162.97 Q 188.30 158.30 190.37 153.84 A 1.43 1.42 12.2 0 1 191.67 153.01 L 197.00 153.01 A 0.50 0.50 0.0 0 1 197.44 153.75 L 189.21 169.33 A 2.32 2.22 60.3 0 0 188.94 170.41 L 188.94 177.47 A 0.68 0.67 88.8 0 1 188.30 178.15 Q 187.83 178.17 185.78 178.16 Q 183.73 178.15 183.26 178.13 A 0.68 0.67 -88.3 0 1 182.63 177.44 L 182.69 170.38 A 2.32 2.22 -59.8 0 0 182.43 169.30 L 174.33 153.65 A 0.50 0.50 0.0 0 1 174.78 152.91 L 180.11 152.96 A 1.43 1.42 -11.7 0 1 181.40 153.80 Q 183.43 158.28 185.56 162.97 Q 185.64 163.14 185.85 163.14 Z" />
+                            <path
+                                d="M 45.33 152.91 Q 49.71 152.94 54.53 152.98 A 0.64 0.64 0.0 0 1 55.17 153.62 L 55.17 157.37 A 0.59 0.59 0.0 0 1 54.58 157.96 L 48.77 157.96 A 0.43 0.43 0.0 0 0 48.34 158.39 L 48.34 177.77 A 0.39 0.39 0.0 0 1 47.97 178.16 Q 47.39 178.18 45.20 178.17 Q 43.01 178.15 42.43 178.13 A 0.39 0.39 0.0 0 1 42.07 177.74 L 42.26 158.36 A 0.43 0.43 0.0 0 0 41.83 157.93 L 36.02 157.87 A 0.59 0.59 0.0 0 1 35.44 157.27 L 35.47 153.52 A 0.64 0.64 0.0 0 1 36.12 152.89 Q 40.94 152.89 45.33 152.91 Z" />
+                            <path
+                                d="M 70.13 152.94 Q 71.05 152.94 72.82 152.94 A 1.20 1.20 0.0 0 1 73.93 153.70 L 82.95 177.32 A 0.62 0.62 0.0 0 1 82.37 178.16 L 77.69 178.16 A 1.48 1.47 -10.3 0 1 76.31 177.21 L 75.13 174.12 A 0.68 0.68 0.0 0 0 74.47 173.68 Q 72.27 173.72 70.16 173.72 Q 68.05 173.73 65.85 173.69 A 0.68 0.68 0.0 0 0 65.19 174.14 L 64.02 177.23 A 1.48 1.47 10.1 0 1 62.65 178.19 L 57.97 178.20 A 0.62 0.62 0.0 0 1 57.38 177.36 L 66.32 153.71 A 1.20 1.20 0.0 0 1 67.44 152.95 Q 69.20 152.94 70.13 152.94 Z M 67.57 168.71 L 72.66 168.71 A 0.55 0.55 0.0 0 0 73.17 167.96 L 70.40 160.69 A 0.38 0.38 0.0 0 0 69.69 160.71 L 67.16 168.14 A 0.43 0.43 0.0 0 0 67.57 168.71 Z" />
+                            <path
+                                d="M 86.71 177.42 L 86.71 153.34 A 0.37 0.37 0.0 0 1 87.08 152.97 Q 94.18 152.85 99.23 153.00 Q 103.74 153.13 105.69 156.04 A 2.70 2.64 -71.0 0 1 106.05 156.80 Q 107.59 161.82 104.21 164.54 A 0.66 0.65 48.0 0 0 104.16 165.52 L 106.47 167.84 A 1.77 1.72 16.8 0 1 106.94 168.69 Q 108.79 176.90 100.19 178.04 Q 98.49 178.26 87.41 178.14 A 0.72 0.71 -89.6 0 1 86.71 177.42 Z M 92.90 160.21 L 92.89 161.20 Q 92.75 161.90 92.84 162.37 A 0.83 0.81 -5.5 0 0 93.65 163.02 L 98.15 163.02 A 2.17 2.17 0.0 0 0 100.32 160.85 L 100.32 160.27 A 2.27 2.26 90.0 0 0 98.06 158.00 L 93.57 158.00 A 0.66 0.66 0.0 0 0 92.91 158.65 L 92.90 160.21 Z M 92.90 168.46 Q 92.78 169.02 92.94 169.55 L 92.85 172.14 A 0.64 0.63 -87.1 0 0 93.43 172.79 Q 96.22 173.03 98.91 172.80 A 2.28 2.27 -87.7 0 0 100.96 170.90 C 101.63 166.87 96.09 167.48 93.43 167.54 A 0.56 0.56 0.0 0 0 92.91 167.93 Q 92.84 168.18 92.90 168.46 Z" />
+                            <rect x="111.61" y="152.97" width="6.22" height="25.22" rx="0.67" />
+                            <path
+                                d="M 123.30 177.54 L 123.30 153.55 A 0.62 0.62 0.0 0 1 123.92 152.93 L 128.80 152.93 A 0.62 0.62 0.0 0 1 129.42 153.55 L 129.42 172.48 A 0.62 0.62 0.0 0 0 130.04 173.10 L 137.42 173.10 A 0.62 0.62 0.0 0 1 138.04 173.72 L 138.04 177.54 A 0.62 0.62 0.0 0 1 137.42 178.16 L 123.92 178.16 A 0.62 0.62 0.0 0 1 123.30 177.54 Z" />
+                            <rect x="-3.13" y="-12.61" transform="translate(144.75,165.58) rotate(-0.1)" width="6.26"
+                                height="25.22" rx="0.56" />
+                            <path
+                                d="M 161.72 178.19 Q 159.53 178.18 158.94 178.16 A 0.39 0.39 0.0 0 1 158.58 177.77 L 158.73 158.36 A 0.43 0.43 0.0 0 0 158.30 157.93 L 152.48 157.88 A 0.59 0.59 0.0 0 1 151.90 157.29 L 151.93 153.53 A 0.64 0.64 0.0 0 1 152.57 152.90 Q 157.40 152.89 161.79 152.90 Q 166.18 152.92 171.01 152.95 A 0.64 0.64 0.0 0 1 171.65 153.59 L 171.66 157.34 A 0.59 0.59 0.0 0 1 171.07 157.94 L 165.25 157.95 A 0.43 0.43 0.0 0 0 164.82 158.38 L 164.86 177.78 A 0.39 0.39 0.0 0 1 164.49 178.17 Q 163.91 178.19 161.72 178.19 Z" />
+                        </g>
+                        <g fill="#080a09" fill-opacity="0.996">
+                            <path d="M 12.87 159.21 L 12.89 161.04 L 12.87 159.21 Z" />
+                            <path d="M 31.47 160.22 Q 31.44 159.70 31.66 159.19 Q 31.87 160.21 31.47 160.22 Z" />
+                            <path
+                                d="M 95.88 196.48 A 0.47 0.47 0.0 0 0 96.76 196.25 L 96.78 190.27 A 0.54 0.54 0.0 0 1 97.33 189.73 L 97.72 189.73 A 0.60 0.60 0.0 0 1 98.32 190.33 L 98.28 199.17 A 1.02 1.02 0.0 0 1 96.37 199.68 L 92.49 192.90 A 0.43 0.43 0.0 0 0 91.69 193.11 L 91.66 199.15 A 0.81 0.81 0.0 0 1 90.85 199.95 L 90.57 199.95 A 0.46 0.46 0.0 0 1 90.11 199.49 L 90.15 190.57 A 1.09 1.09 0.0 0 1 92.19 190.03 L 95.88 196.48 Z" />
+                            <path
+                                d="M 47.55 194.83 Q 47.52 191.00 47.54 190.43 A 0.74 0.74 0.0 0 1 48.26 189.71 L 52.46 189.61 A 0.62 0.61 -1.3 0 1 53.10 190.21 L 53.10 190.49 A 0.41 0.40 -1.3 0 1 52.70 190.90 L 49.90 190.97 A 0.83 0.83 0.0 0 0 49.08 191.82 L 49.12 193.31 A 0.88 0.87 -4.8 0 0 50.12 194.16 Q 53.00 193.73 52.92 194.80 Q 53.03 195.82 50.13 195.45 A 0.88 0.87 3.7 0 0 49.15 196.31 L 49.14 197.81 A 0.83 0.83 0.0 0 0 49.97 198.65 L 52.78 198.66 A 0.41 0.40 0.2 0 1 53.19 199.06 L 53.18 199.34 A 0.62 0.61 0.2 0 1 52.56 199.95 L 48.36 199.94 A 0.74 0.74 0.0 0 1 47.62 199.23 Q 47.59 198.66 47.55 194.83 Z" />
+                            <path
+                                d="M 60.91 196.60 A 0.48 0.48 0.0 0 0 61.80 196.37 L 61.83 190.34 A 0.55 0.55 0.0 0 1 62.38 189.79 L 62.76 189.79 A 0.61 0.61 0.0 0 1 63.37 190.41 L 63.33 199.31 A 1.03 1.03 0.0 0 1 61.40 199.82 L 57.50 192.99 A 0.43 0.43 0.0 0 0 56.69 193.21 L 56.66 199.28 A 0.82 0.82 0.0 0 1 55.84 200.10 L 55.57 200.09 A 0.47 0.47 0.0 0 1 55.10 199.62 L 55.14 190.64 A 1.10 1.10 0.0 0 1 57.19 190.10 L 60.91 196.60 Z" />
+                            <path
+                                d="M 68.18 200.01 Q 67.34 200.00 67.40 197.95 Q 67.51 193.65 67.44 191.47 A 0.65 0.64 -0.7 0 0 66.80 190.85 L 65.28 190.85 A 0.36 0.35 -89.7 0 1 64.93 190.49 L 64.93 190.20 A 0.28 0.28 0.0 0 1 65.17 189.92 Q 66.80 189.68 68.30 189.78 Q 69.80 189.70 71.43 189.96 A 0.28 0.28 0.0 0 1 71.66 190.24 L 71.66 190.53 A 0.36 0.35 -89.6 0 1 71.31 190.88 L 69.79 190.87 A 0.65 0.64 1.4 0 0 69.14 191.48 Q 69.04 193.66 69.11 197.96 Q 69.14 200.02 68.18 200.01 Z" />
+                            <path
+                                d="M 74.90 196.64 Q 75.08 198.02 74.73 199.61 A 0.66 0.66 0.0 0 1 73.45 199.67 Q 73.34 199.33 73.39 190.32 A 0.53 0.52 -1.1 0 1 73.90 189.80 C 76.92 189.74 81.02 188.94 80.36 193.68 A 0.90 0.87 72.0 0 1 80.11 194.19 L 78.93 195.36 A 1.21 1.21 0.0 0 0 78.81 196.92 Q 80.56 199.36 80.35 199.67 A 0.95 0.92 47.5 0 1 78.78 199.58 Q 77.09 196.77 76.35 195.97 A 0.84 0.84 0.0 0 0 74.90 196.64 Z M 74.93 191.21 L 74.91 194.07 A 0.35 0.35 0.0 0 0 75.26 194.42 L 76.91 194.43 A 1.94 1.58 0.4 0 0 78.86 192.86 L 78.86 192.46 A 1.94 1.58 0.4 0 0 76.93 190.87 L 75.28 190.86 A 0.35 0.35 0.0 0 0 74.93 191.21 Z" />
+                            <path
+                                d="M 87.90 194.80 Q 88.01 195.81 85.13 195.46 A 0.87 0.87 0.0 0 0 84.15 196.32 L 84.15 197.81 A 0.83 0.83 0.0 0 0 84.98 198.64 L 87.77 198.64 A 0.41 0.40 0.0 0 1 88.18 199.04 L 88.18 199.32 A 0.62 0.61 0.0 0 1 87.56 199.93 L 83.38 199.93 A 0.74 0.74 0.0 0 1 82.64 199.23 Q 82.61 198.66 82.56 194.85 Q 82.51 191.04 82.53 190.46 A 0.74 0.74 0.0 0 1 83.25 189.74 L 87.42 189.63 A 0.62 0.61 -1.5 0 1 88.06 190.23 L 88.07 190.51 A 0.41 0.40 -1.5 0 1 87.67 190.92 L 84.88 190.99 A 0.83 0.83 0.0 0 0 84.07 191.84 L 84.11 193.33 A 0.87 0.87 0.0 0 0 85.11 194.17 Q 87.98 193.74 87.90 194.80 Z" />
+                            <path
+                                d="M 104.45 189.81 Q 104.66 189.81 104.85 189.84 A 0.79 0.77 84.2 0 1 105.44 190.33 L 108.89 199.36 A 0.54 0.54 0.0 0 1 108.44 200.09 L 108.08 200.12 A 0.73 0.72 76.6 0 1 107.34 199.66 L 106.89 198.49 A 0.92 0.92 0.0 0 0 106.03 197.89 Q 105.72 197.88 104.41 197.88 Q 103.11 197.87 102.80 197.87 A 0.92 0.92 0.0 0 0 101.93 198.47 L 101.47 199.64 A 0.73 0.72 -76.1 0 1 100.73 200.09 L 100.37 200.06 A 0.54 0.54 0.0 0 1 99.93 199.32 L 103.45 190.32 A 0.79 0.77 -83.7 0 1 104.04 189.84 Q 104.24 189.80 104.45 189.81 Z M 104.52 196.34 Q 105.27 196.33 105.56 196.21 A 0.65 0.65 0.0 0 0 105.93 195.41 Q 104.83 192.16 104.44 192.17 Q 104.04 192.18 103.07 195.46 A 0.65 0.65 0.0 0 0 103.46 196.25 Q 103.76 196.36 104.52 196.34 Z" />
+                            <path
+                                d="M 112.77 194.27 A 0.37 0.37 0.0 0 0 112.05 194.40 L 112.05 199.27 A 0.81 0.80 -90.0 0 1 111.25 200.08 L 110.86 200.08 A 0.67 0.66 -0.4 0 1 110.19 199.43 Q 110.17 198.00 110.22 190.63 Q 110.23 189.83 111.06 189.76 Q 112.00 189.67 112.43 190.61 Q 113.23 192.36 114.93 196.44 A 0.60 0.60 0.0 0 0 116.01 196.49 L 119.28 190.30 A 0.88 0.88 0.0 0 1 120.94 190.70 L 121.09 199.29 A 0.79 0.78 26.0 0 1 119.68 199.77 Q 118.91 198.75 119.75 195.10 A 0.81 0.81 0.0 0 0 119.33 194.20 L 119.03 194.03 A 0.24 0.24 0.0 0 0 118.70 194.15 L 116.43 199.50 A 0.91 0.90 45.9 0 1 114.75 199.47 L 112.77 194.27 Z" />
+                            <rect x="-0.79" y="-5.07" transform="translate(123.92,194.92) rotate(-0.1)" width="1.58"
+                                height="10.14" rx="0.66" />
+                            <path
+                                d="M 131.95 191.07 L 129.22 191.07 A 1.08 1.08 0.0 0 0 128.14 192.15 L 128.14 192.88 A 1.03 1.03 0.0 0 0 129.15 193.91 L 131.38 193.97 A 0.69 0.69 0.0 0 1 131.59 195.31 Q 131.19 195.45 129.23 195.34 Q 128.55 195.30 128.24 196.06 A 1.92 1.78 -81.7 0 0 130.07 198.72 Q 130.93 198.59 131.81 198.54 A 0.82 0.81 -1.7 0 1 132.68 199.35 L 132.68 199.65 A 0.43 0.42 0.0 0 1 132.25 200.07 L 127.88 200.07 A 1.02 1.01 0.0 0 1 126.86 199.06 L 126.86 190.96 A 1.20 1.19 0.0 0 1 128.06 189.77 L 132.01 189.77 A 0.43 0.43 0.0 0 1 132.44 190.20 L 132.44 190.58 A 0.49 0.49 0.0 0 1 131.95 191.07 Z" />
+                            <path
+                                d="M 141.13 196.33 L 141.13 190.28 A 0.55 0.55 0.0 0 1 141.68 189.73 L 142.07 189.73 A 0.61 0.61 0.0 0 1 142.68 190.34 L 142.68 199.28 A 1.04 1.03 -60.0 0 1 140.75 199.80 L 136.80 192.96 A 0.44 0.43 -60.1 0 0 135.99 193.18 L 135.99 199.28 A 0.82 0.82 0.0 0 1 135.17 200.10 L 134.89 200.10 A 0.47 0.47 0.0 0 1 134.42 199.63 L 134.42 190.61 A 1.10 1.10 0.0 0 1 136.48 190.06 L 140.24 196.57 A 0.48 0.48 0.0 0 0 141.13 196.33 Z" />
+                            <path
+                                d="M 147.73 189.78 Q 149.24 189.69 150.89 189.94 A 0.28 0.28 0.0 0 1 151.12 190.22 L 151.12 190.51 A 0.36 0.35 90.0 0 1 150.77 190.87 L 149.24 190.87 A 0.65 0.64 0.9 0 0 148.59 191.49 Q 148.51 193.68 148.61 198.00 Q 148.66 200.07 147.81 200.08 Q 146.85 200.08 146.89 198.01 Q 146.97 193.68 146.89 191.49 A 0.65 0.64 -1.1 0 0 146.23 190.87 L 144.70 190.88 A 0.36 0.35 89.8 0 1 144.35 190.52 L 144.35 190.23 A 0.28 0.28 0.0 0 1 144.58 189.95 Q 146.23 189.70 147.73 189.78 Z" />
+                            <path
+                                d="M 162.75 194.83 A 5.23 5.23 0.0 0 1 157.52 200.06 A 5.23 5.23 0.0 0 1 152.29 194.83 A 5.23 5.23 0.0 0 1 157.52 189.60 A 5.23 5.23 0.0 0 1 162.75 194.83 Z M 160.9012 194.0660 A 3.14 3.14 0.0 0 0 157.7667 190.9205 L 157.2067 190.9195 A 3.14 3.14 0.0 0 0 154.0612 194.0540 L 154.0588 195.4140 A 3.14 3.14 0.0 0 0 157.1933 198.5595 L 157.7533 198.5605 A 3.14 3.14 0.0 0 0 160.8988 195.4260 L 160.9012 194.0660 Z" />
+                        </g>
+                        <g stroke-width="2.00" fill="none" stroke-linecap="butt">
+                            <path stroke="#121f2f" vector-effect="non-scaling-stroke"
+                                d="M 92.90 160.21 L 92.89 161.20" />
+                            <path stroke="#121f2f" vector-effect="non-scaling-stroke"
+                                d="M 92.90 168.46 Q 92.78 169.02 92.94 169.55" />
+                        </g>
+                        <g fill="#080a09" fill-opacity="0.996">
+                            <path d="M 92.89 161.20 L 92.90 160.21 L 92.89 161.20 Z" />
+                            <path d="M 92.94 169.55 Q 92.78 169.02 92.90 168.46 L 92.94 169.55 Z" />
+                        </g>
+                    </svg>
+                    <h1 class="slide-title lg">A un solo botón de que comience <span class="accent-red">realmente</span>
+                        tu mejor versión</h1>
+                    <span class="eyebrow-pill">Avanzá para ver más →</span>
+                </div>
+            </section>
+
+            <!-- ============ 1. REGISTRO ============ -->
+            <section class="slide" id="slide-registro" data-duration="9000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <div class="slide-content">
+                    <p class="slide-kicker">Empezá ahora</p>
+                    <h2 class="slide-title">¿Arrancamos?</h2>
+                    <p class="slide-text">Dejanos tu nombre y tu objetivo, y te acompañamos desde el primer día.</p>
+
+                    <form id="registrationForm" class="interactive" novalidate>
+                        <div class="form-group">
+                            <label for="userName" class="form-label">Tu nombre</label>
+                            <input type="text" id="userName" name="userName" class="form-input" placeholder="Tu nombre"
+                                autocomplete="name">
+                            <div class="error-message" id="nameError">Por favor ingresá tu nombre</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">¿Cuál es tu objetivo?</label>
+                            <div class="objective-grid" id="objectiveGrid">
+                                <button type="button" class="objective-btn" data-value="Estética / Hipertrofia"
+                                    aria-pressed="false">Estética / Hipertrofia</button>
+                                <button type="button" class="objective-btn" data-value="Rendimiento deportivo"
+                                    aria-pressed="false">Rendimiento deportivo</button>
+                                <button type="button" class="objective-btn" data-value="Salud general"
+                                    aria-pressed="false">Salud general</button>
+                                <button type="button" class="objective-btn" data-value="No estoy seguro"
+                                    aria-pressed="false">No estoy seguro</button>
+                            </div>
+                            <input type="hidden" id="userObjective" name="userObjective">
+                            <div class="error-message" id="objectiveError">Por favor seleccioná un objetivo</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-red submit-btn">Comenzar</button>
+                    </form>
+
+                    <div class="saved-banner" id="savedBanner">
+                        <p class="saved-text">
+                            Hola <span class="saved-name" id="bannerName"></span>, sabemos que tu objetivo es <span
+                                class="saved-objective" id="bannerObjective"></span>. Te acompañamos en cada paso.
+                        </p>
+                        <button class="reset-btn interactive" id="resetBtn">Cambiar datos de registro</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ 2. TRIGGER QUESTION ============ -->
+            <section class="slide" id="slide-trigger" data-duration="9000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <div class="slide-content">
+                    <p class="slide-kicker">Stability</p>
+                    <div class="poll-sticker interactive" id="painPoll">
+                        <h2 class="poll-question">¿Qué te frena hoy a empezar a entrenar?</h2>
+                        <div class="poll-options">
+                            <button class="poll-option interactive" data-option="tiempo" type="button">
+                                <span class="poll-option-fill"></span>
+                                <span class="poll-option-text">La falta de tiempo</span>
+                                <span class="poll-option-percent"></span>
+                            </button>
+                            <button class="poll-option interactive" data-option="guia" type="button">
+                                <span class="poll-option-fill"></span>
+                                <span class="poll-option-text">No saber por dónde empezar</span>
+                                <span class="poll-option-percent"></span>
+                            </button>
+                            <button class="poll-option interactive" data-option="motivacion" type="button">
+                                <span class="poll-option-fill"></span>
+                                <span class="poll-option-text">Falta de constancia o motivación</span>
+                                <span class="poll-option-percent"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="slide-text"
+                        style="text-align: center; margin-top: 10px; font-size: 13.5px; line-height: 1.4; color: var(--gray-light); margin-bottom: 5px;">
+                        Stability es una comunidad de entrenamiento donde vas a encontrar entrenadores preocupados por
+                        vos.
+                    </p>
+                    <p class="slide-title"
+                        style="font-size:18px; margin-bottom: 0; text-align: center; font-weight: 700;">¿Qué nos
+                        diferencia? <span class="accent-blue">Todo esto ↓</span></p>
+                </div>
+            </section>
+
+            <!-- ============ 2-6. FEATURES ============ -->
+            <section class="slide" id="slide-feature-1" data-duration="5000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <img src="assets/images/features/imagen-planificacion.webp" alt="Tu propia planificación según el mes"
+                    class="slide-bg-photo" width="640" height="1125" loading="eager" fetchpriority="high"
+                    decoding="async" onerror="this.style.display='none'">
+                <div class="slide-bg-overlay"></div>
+                <div class="slide-content">
+                    <p class="slide-kicker">La app · 1 de 5</p>
+                    <h2 class="slide-title">Tu propia planificación según el mes</h2>
+                    <p class="slide-text" data-objective="Estética / Hipertrofia">Tu plan mensual se arma pensando en
+                        hipertrofia y recomposición corporal, con foco en ganancia muscular sostenida.</p>
+                    <p class="slide-text" data-objective="Rendimiento deportivo">Estructuramos tu plan mensual para
+                        potenciar tu velocidad, fuerza explosiva y resistencia específica en la cancha o disciplina que
+                        practiques.</p>
+                    <p class="slide-text" data-objective="Salud general">Tu plan mensual se diseña priorizando tu salud
+                        general, siguiendo criterios profesionales de prescripción de ejercicio.</p>
+                    <p class="slide-text" data-objective="No estoy seguro">Armamos tu plan mensual junto a vos, probando
+                        y ajustando hasta encontrar el enfoque que mejor te queda.</p>
+                    <p class="slide-text" data-objective="default">Armamos tu plan mensual junto a vos, probando y
+                        ajustando hasta encontrar el enfoque que mejor te queda.</p>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-feature-2" data-duration="5000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <img src="assets/images/features/imagen-devoluciones.webp"
+                    alt="Registrá tu progreso y ajustá ejercicios" class="slide-bg-photo" width="640" height="1132"
+                    loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <div class="slide-bg-overlay"></div>
+                <div class="slide-content">
+                    <p class="slide-kicker">La app · 2 de 5</p>
+                    <h2 class="slide-title">Registrá tu progreso y ajustá ejercicios y pesos</h2>
+                    <p class="slide-text" data-objective="Estética / Hipertrofia">Registrás cada carga y repetición para
+                        asegurar la sobrecarga progresiva que necesita un plan de hipertrofia.</p>
+                    <p class="slide-text" data-objective="Rendimiento deportivo">Seguí el historial exacto de tus
+                        cargas, marcas y tiempos de recuperación para asegurar progresos cuantificables en cada sesión.
+                    </p>
+                    <p class="slide-text" data-objective="Salud general">Llevás un registro simple de tu actividad,
+                        pensado para sostener el hábito y cuidar tu salud a largo plazo.</p>
+                    <p class="slide-text" data-objective="No estoy seguro">Registrás tu progreso semana a semana y el
+                        equipo te ayuda a interpretar qué te está funcionando.</p>
+                    <p class="slide-text" data-objective="default">Registrás tu progreso semana a semana y el equipo te
+                        ayuda a interpretar qué te está funcionando.</p>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-feature-3" data-duration="5000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <img src="assets/images/team/video-prueba.webp" alt="Videos demostrativos de ejercicios"
+                    class="slide-bg-photo" width="640" height="1131" loading="lazy" decoding="async"
+                    onerror="this.style.display='none'">
+                <div class="slide-bg-overlay"></div>
+                <div class="slide-content">
+                    <p class="slide-kicker">La app · 3 de 5</p>
+                    <h2 class="slide-title">Videos demostrativos de ejercicios</h2>
+                    <p class="slide-text" data-objective="Estética / Hipertrofia">Vídeos con la técnica exacta que
+                        necesita un plan de hipertrofia, para que cada ejercicio sume sin lesionarte.</p>
+                    <p class="slide-text" data-objective="Rendimiento deportivo">Accedé a la biblioteca con la técnica
+                        biomecánica correcta para dominar ejercicios de potencia sin riesgo de sobrecargas o lesiones.
+                    </p>
+                    <p class="slide-text" data-objective="Salud general">Videos claros para que ejecutes cada ejercicio
+                        de forma segura, priorizando siempre tu salud.</p>
+                    <p class="slide-text" data-objective="No estoy seguro">Accedé a videos de cada ejercicio para
+                        entender bien la técnica, sin importar en qué etapa estés.</p>
+                    <p class="slide-text" data-objective="default">Accedé a videos de cada ejercicio para entender bien
+                        la técnica, sin importar en qué etapa estés.</p>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-feature-4" data-duration="5000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <img src="assets/images/features/devoluciones-semanales.webp"
+                    alt="Entrenadores que hacen devoluciones semanales" class="slide-bg-photo" width="640" height="1129"
+                    loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <div class="slide-bg-overlay"></div>
+                <div class="slide-content">
+                    <p class="slide-kicker">La app · 4 de 5</p>
+                    <h2 class="slide-title">Entrenadores que hacen devoluciones semanales</h2>
+                    <p class="slide-text" data-objective="Estética / Hipertrofia">Revisamos tu semana y ajustamos tu
+                        plan de hipertrofia según cómo vino respondiendo tu cuerpo.</p>
+                    <p class="slide-text" data-objective="Rendimiento deportivo">Tu entrenador analiza tus métricas
+                        semanales y ajusta el volumen de carga para que llegues a tu pico de rendimiento óptimo.</p>
+                    <p class="slide-text" data-objective="Salud general">Revisamos tu semana pensando siempre en tu
+                        salud general y en sostener el hábito.</p>
+                    <p class="slide-text" data-objective="No estoy seguro">El equipo completo revisa tu semana y te
+                        ayuda a ir encontrando qué objetivo te representa mejor.</p>
+                    <p class="slide-text" data-objective="default">El equipo completo revisa tu semana y te ayuda a ir
+                        encontrando qué objetivo te representa mejor.</p>
+                </div>
+            </section>
+
+            <section class="slide" id="slide-feature-5" data-duration="5000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <img src="assets/images/features/beneficios-comunidad.webp" alt="Acceso a beneficios de la comunidad"
+                    class="slide-bg-photo" width="640" height="1138" loading="lazy" decoding="async"
+                    onerror="this.style.display='none'">
+                <div class="slide-bg-overlay"></div>
+                <div class="slide-content">
+                    <p class="slide-kicker">La app · 5 de 5</p>
+                    <h2 class="slide-title">Acceso a beneficios de la comunidad</h2>
+                    <p class="slide-text" data-objective="Estética / Hipertrofia">Sumate al ranking y compartí tu
+                        evolución física con otros que también están buscando hipertrofia y recomposición.</p>
+                    <p class="slide-text" data-objective="Rendimiento deportivo">Formá parte de un grupo de atletas
+                        apasionados que comparten tu nivel de exigencia, mentalidad y búsqueda de superación constante.
+                    </p>
+                    <p class="slide-text" data-objective="Salud general">Sumate a una comunidad que te acompaña a
+                        sostener hábitos saludables en el tiempo.</p>
+                    <p class="slide-text" data-objective="No estoy seguro">Sumate a la comunidad de Stability y encontrá
+                        compañía mientras definís tu objetivo.</p>
+                    <p class="slide-text" data-objective="default">Sumate a la comunidad de Stability y encontrá
+                        compañía mientras definís tu objetivo.</p>
+                </div>
+            </section>
+
+            <!-- ============ INTRO EQUIPO ============ -->
+            <section class="slide" id="slide-team-intro" data-duration="4500">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <img src="assets/images/team/quienes-somos.webp" alt="¿Quiénes somos?" class="slide-bg-photo"
+                    width="640" height="1138" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <div class="slide-bg-overlay"></div>
+                <div class="slide-content">
+                    <p class="slide-kicker">Sobre nosotros</p>
+                    <h2 class="slide-title">¿Quiénes somos?</h2>
+                    <p class="slide-text" id="teamIntroGreeting">Conocé al equipo que te va a acompañar.</p>
+                </div>
+            </section>
+
+            <!-- ============ 7-10. EQUIPO ============ -->
+            <section class="slide team-slide" id="slide-team-juampi" data-duration="6000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <img src="assets/images/team/ProfeJuampi.webp" alt="Juampi Labari" class="slide-bg-photo" width="640"
+                    height="962" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <div class="slide-bg-overlay"></div>
+                <div class="slide-content">
+                    <p class="slide-kicker">Nuestro equipo · 1 de 3</p>
+                    <h2 class="team-name">Juampi Labari</h2>
+                    <span class="team-specialty">Prof. de Educación Física</span>
+                    <p class="slide-text">Especialista en preparación física en fútbol. Apasionado por la optimización
+                        del movimiento y el rendimiento en atletas.</p>
+                    <div class="team-location">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                        Entrenamiento presencial (Nueva Córdoba) y a distancia
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide team-slide" id="slide-team-juan" data-duration="6000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <div class="juan-bg"></div>
+                <img src="assets/images/team/ProfeJuan.webp" alt="Juan Borreda" class="slide-bg-photo" width="640"
+                    height="925" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <div class="slide-bg-overlay"></div>
+                <div class="slide-content">
+                    <p class="slide-kicker">Nuestro equipo · 2 de 3</p>
+                    <h2 class="team-name">Juan Borreda</h2>
+                    <span class="team-specialty">Prof. de Educación Física</span>
+                    <p class="slide-text">Personal trainer enfocado en recomposición corporal, hipertrofia y
+                        readaptación física con alta trayectoria.</p>
+                    <div class="team-location">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                        Entrenamiento presencial (Ruta 20) y a distancia
+                    </div>
+                </div>
+            </section>
+
+            <!-- Agustín Ramis: sin foto propia todavía (bug del sitio anterior reusaba
+             la foto de Juan). Placeholder con iniciales hasta que se suba
+             assets/images/team/AgustinRamis.webp -->
+            <section class="slide team-slide" id="slide-team-agustin" data-duration="6000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <img src="assets/images/team/ProfeAgus.webp" alt="Agustín Ramis" class="slide-bg-photo" width="640"
+                    height="853" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <div class="slide-bg-overlay"></div>
+                <div class="slide-content">
+                    <p class="slide-kicker">Nuestro equipo · 3 de 3</p>
+                    <h2 class="team-name">Agustín Ramis</h2>
+                    <span class="team-specialty">Prof. de Educación Física</span>
+                    <p class="slide-text">Diplomado en prescripción y evaluación de planes de ejercicio físico para la
+                        mejora integral de la salud.</p>
+                    <div class="team-location">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                        Entrenamiento presencial (Córdoba - Zona Sur) y a distancia
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ INTRO TESTIMONIOS ============ -->
+            <section class="slide" id="slide-testi-intro" data-duration="4500">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <img src="assets/images/team/imagen-comunidad.webp" alt="Comunidad Stability" class="slide-bg-photo"
+                    width="640" height="1140" loading="lazy" decoding="async" onerror="this.style.display='none'">
+                <div class="slide-bg-overlay"></div>
+                <div class="slide-content">
+                    <p class="slide-kicker">Comunidad</p>
+                    <h2 class="slide-title">Lo que logra nuestra comunidad</h2>
+                    <p class="slide-text" id="testiIntroGreeting">Mirá lo que lograron otros alumnos que ya están
+                        entrenando con nosotros.</p>
+                </div>
+            </section>
+
+            <!-- ============ TESTIMONIOS (agrupados de a 2-3 según entren sin scroll) ============ -->
+            <section class="slide testi-group-slide" id="slide-testi-1" data-duration="8000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <div class="slide-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="45.00 18.00 122.00 120.00"
+                        class="testi-slide-logo" role="img" aria-label="STABILITY">
+                        <g class="gear-rotate">
+                            <path fill="#1c3355"
+                                d="M 114.50 75.37 Q 102.16 88.43 84.71 90.64 C 71.16 92.35 58.12 86.55 49.07 76.16 Q 47.60 74.47 47.49 72.52 A 1.81 1.81 0.0 0 1 48.81 70.68 L 56.87 68.43 A 2.09 2.08 -1.7 0 0 58.34 66.88 Q 59.99 59.49 63.50 54.18 Q 63.66 53.95 64.83 51.61 A 0.66 0.66 0.0 0 0 64.81 51.00 L 60.05 42.75 A 0.96 0.96 0.0 0 1 60.20 41.58 L 68.80 32.98 A 0.82 0.81 37.2 0 1 69.79 32.85 L 78.24 37.73 A 0.65 0.64 42.8 0 0 78.92 37.71 Q 83.72 34.49 89.64 32.38 C 91.30 31.79 93.33 31.55 95.27 30.82 A 0.87 0.86 86.9 0 0 95.81 30.21 L 97.99 21.12 A 0.70 0.69 -83.0 0 1 98.66 20.59 L 111.52 20.59 A 0.45 0.44 -7.7 0 1 111.95 20.91 L 114.59 30.32 A 0.81 0.80 88.1 0 0 115.20 30.90 Q 123.77 32.81 131.15 37.66 A 0.77 0.77 0.0 0 0 131.96 37.68 L 140.09 32.99 A 1.22 1.21 52.3 0 1 141.55 33.18 L 150.14 41.77 A 0.81 0.81 0.0 0 1 150.25 42.78 Q 147.88 46.59 145.54 50.51 Q 145.35 50.82 145.36 52.29 A 0.57 0.57 0.0 0 1 144.94 52.85 L 130.06 57.02 A 0.95 0.93 -30.2 0 1 129.16 56.79 C 126.63 54.36 124.57 52.33 122.18 50.87 Q 110.59 43.80 98.30 46.59 C 85.40 49.53 75.98 59.50 73.55 72.52 Q 72.93 75.86 73.12 78.27 A 0.98 0.98 0.0 0 0 73.60 79.04 C 81.75 83.75 92.61 83.72 101.61 80.92 Q 107.92 78.95 114.20 75.01 A 0.24 0.24 0.0 0 1 114.50 75.37 Z" />
+                            <path fill="#c41b1a"
+                                d="M 151.39 66.93 L 152.44 67.97 A 2.56 2.52 74.1 0 0 153.62 68.64 L 161.81 70.60 A 0.98 0.98 0.0 0 1 162.56 71.55 L 162.56 83.88 A 0.75 0.75 0.0 0 1 162.01 84.60 L 152.91 87.15 A 1.14 1.14 0.0 0 0 152.10 88.00 Q 150.14 96.47 145.69 103.43 A 1.29 1.28 -43.4 0 0 145.65 104.77 L 150.40 113.00 A 0.73 0.73 0.0 0 1 150.29 113.88 L 141.44 122.72 A 0.89 0.88 -52.8 0 1 140.37 122.87 L 132.18 118.14 A 1.16 1.14 43.1 0 0 130.97 118.17 Q 123.51 122.96 114.94 124.89 A 0.90 0.89 -89.5 0 0 114.26 125.56 L 112.07 134.70 A 0.83 0.83 0.0 0 1 111.26 135.34 L 98.81 135.34 A 0.61 0.60 81.6 0 1 98.23 134.90 L 95.52 125.22 A 0.55 0.53 3.7 0 0 95.19 124.86 C 93.60 124.25 91.41 123.97 90.04 123.49 Q 84.26 121.43 78.98 118.14 A 0.89 0.88 -43.4 0 0 78.06 118.12 L 69.68 122.96 A 0.68 0.68 0.0 0 1 68.86 122.85 L 59.90 113.89 A 0.76 0.75 -53.0 0 1 59.78 112.99 L 64.84 104.23 A 0.44 0.44 0.0 0 0 64.82 103.76 Q 60.63 97.77 58.65 90.48 A 0.35 0.34 -84.2 0 1 59.14 90.08 Q 75.85 98.81 94.14 93.33 C 105.65 89.88 115.49 81.95 123.31 73.08 A 0.94 0.93 -48.7 0 0 123.23 71.77 L 116.88 66.16 A 0.47 0.47 0.0 0 1 117.07 65.36 L 147.45 56.86 A 0.60 0.59 86.6 0 1 148.20 57.53 L 143.22 88.44 A 0.43 0.42 -64.4 0 1 142.52 88.69 L 136.20 83.10 A 1.13 1.13 0.0 0 0 134.60 83.20 C 124.70 94.59 112.69 102.64 97.87 105.49 C 95.43 105.96 93.37 105.76 91.39 106.39 A 0.26 0.26 0.0 0 0 91.37 106.87 C 108.94 114.51 127.45 106.69 134.95 89.33 A 0.74 0.74 0.0 0 1 136.12 89.07 L 145.67 97.52 A 0.45 0.45 0.0 0 0 146.41 97.25 L 151.29 66.96 A 0.06 0.06 0.0 0 1 151.39 66.93 Z" />
+                        </g>
+                    </svg>
+                    <p class="slide-kicker">Lo que dicen nuestros alumnos · 1 de 4</p>
+                    <div class="testi-cards">
+                        <div class="testi-card">
+                            <img src="assets/images/testimonials/Referencia3Joaco.webp" alt="Joaco Fuxa"
+                                class="testi-card-avatar" onerror="this.style.visibility='hidden'">
+                            <div>
+                                <p class="testi-card-name">Joaco Fuxa</p>
+                                <p class="testi-card-quote">"Voy al gimnasio desde hace muchos años, pero fue con
+                                    Stability cuando realmente entendí lo que significa entrenar en serio. Gracias a su
+                                    rutina planificada y totalmente personalizada, junto con el seguimiento constante de
+                                    profesionales como los profes, empecé a notar avances reales en poco tiempo, tanto
+                                    en mi rendimiento como en mi cuerpo. Dejé de improvisar con ejercicios que veía en
+                                    redes y pasé a entrenar con un objetivo claro, moviendo más peso y manejando un
+                                    volumen de trabajo que antes me parecía inalcanzable. Sin dudas, los mejores."</p>
+                            </div>
+                        </div>
+                        <div class="testi-card">
+                            <img src="assets/images/testimonials/referencia1Manu.webp" alt="Manu Dávila"
+                                class="testi-card-avatar" onerror="this.style.visibility='hidden'">
+                            <div>
+                                <p class="testi-card-name">Manu Dávila</p>
+                                <p class="testi-card-quote">"Entrenando con Stability me siento acompañado, bien
+                                    asesorado y distinto."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide testi-group-slide" id="slide-testi-2" data-duration="8000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <div class="slide-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="45.00 18.00 122.00 120.00"
+                        class="testi-slide-logo" role="img" aria-label="STABILITY">
+                        <g class="gear-rotate">
+                            <path fill="#1c3355"
+                                d="M 114.50 75.37 Q 102.16 88.43 84.71 90.64 C 71.16 92.35 58.12 86.55 49.07 76.16 Q 47.60 74.47 47.49 72.52 A 1.81 1.81 0.0 0 1 48.81 70.68 L 56.87 68.43 A 2.09 2.08 -1.7 0 0 58.34 66.88 Q 59.99 59.49 63.50 54.18 Q 63.66 53.95 64.83 51.61 A 0.66 0.66 0.0 0 0 64.81 51.00 L 60.05 42.75 A 0.96 0.96 0.0 0 1 60.20 41.58 L 68.80 32.98 A 0.82 0.81 37.2 0 1 69.79 32.85 L 78.24 37.73 A 0.65 0.64 42.8 0 0 78.92 37.71 Q 83.72 34.49 89.64 32.38 C 91.30 31.79 93.33 31.55 95.27 30.82 A 0.87 0.86 86.9 0 0 95.81 30.21 L 97.99 21.12 A 0.70 0.69 -83.0 0 1 98.66 20.59 L 111.52 20.59 A 0.45 0.44 -7.7 0 1 111.95 20.91 L 114.59 30.32 A 0.81 0.80 88.1 0 0 115.20 30.90 Q 123.77 32.81 131.15 37.66 A 0.77 0.77 0.0 0 0 131.96 37.68 L 140.09 32.99 A 1.22 1.21 52.3 0 1 141.55 33.18 L 150.14 41.77 A 0.81 0.81 0.0 0 1 150.25 42.78 Q 147.88 46.59 145.54 50.51 Q 145.35 50.82 145.36 52.29 A 0.57 0.57 0.0 0 1 144.94 52.85 L 130.06 57.02 A 0.95 0.93 -30.2 0 1 129.16 56.79 C 126.63 54.36 124.57 52.33 122.18 50.87 Q 110.59 43.80 98.30 46.59 C 85.40 49.53 75.98 59.50 73.55 72.52 Q 72.93 75.86 73.12 78.27 A 0.98 0.98 0.0 0 0 73.60 79.04 C 81.75 83.75 92.61 83.72 101.61 80.92 Q 107.92 78.95 114.20 75.01 A 0.24 0.24 0.0 0 1 114.50 75.37 Z" />
+                            <path fill="#c41b1a"
+                                d="M 151.39 66.93 L 152.44 67.97 A 2.56 2.52 74.1 0 0 153.62 68.64 L 161.81 70.60 A 0.98 0.98 0.0 0 1 162.56 71.55 L 162.56 83.88 A 0.75 0.75 0.0 0 1 162.01 84.60 L 152.91 87.15 A 1.14 1.14 0.0 0 0 152.10 88.00 Q 150.14 96.47 145.69 103.43 A 1.29 1.28 -43.4 0 0 145.65 104.77 L 150.40 113.00 A 0.73 0.73 0.0 0 1 150.29 113.88 L 141.44 122.72 A 0.89 0.88 -52.8 0 1 140.37 122.87 L 132.18 118.14 A 1.16 1.14 43.1 0 0 130.97 118.17 Q 123.51 122.96 114.94 124.89 A 0.90 0.89 -89.5 0 0 114.26 125.56 L 112.07 134.70 A 0.83 0.83 0.0 0 1 111.26 135.34 L 98.81 135.34 A 0.61 0.60 81.6 0 1 98.23 134.90 L 95.52 125.22 A 0.55 0.53 3.7 0 0 95.19 124.86 C 93.60 124.25 91.41 123.97 90.04 123.49 Q 84.26 121.43 78.98 118.14 A 0.89 0.88 -43.4 0 0 78.06 118.12 L 69.68 122.96 A 0.68 0.68 0.0 0 1 68.86 122.85 L 59.90 113.89 A 0.76 0.75 -53.0 0 1 59.78 112.99 L 64.84 104.23 A 0.44 0.44 0.0 0 0 64.82 103.76 Q 60.63 97.77 58.65 90.48 A 0.35 0.34 -84.2 0 1 59.14 90.08 Q 75.85 98.81 94.14 93.33 C 105.65 89.88 115.49 81.95 123.31 73.08 A 0.94 0.93 -48.7 0 0 123.23 71.77 L 116.88 66.16 A 0.47 0.47 0.0 0 1 117.07 65.36 L 147.45 56.86 A 0.60 0.59 86.6 0 1 148.20 57.53 L 143.22 88.44 A 0.43 0.42 -64.4 0 1 142.52 88.69 L 136.20 83.10 A 1.13 1.13 0.0 0 0 134.60 83.20 C 124.70 94.59 112.69 102.64 97.87 105.49 C 95.43 105.96 93.37 105.76 91.39 106.39 A 0.26 0.26 0.0 0 0 91.37 106.87 C 108.94 114.51 127.45 106.69 134.95 89.33 A 0.74 0.74 0.0 0 1 136.12 89.07 L 145.67 97.52 A 0.45 0.45 0.0 0 0 146.41 97.25 L 151.29 66.96 A 0.06 0.06 0.0 0 1 151.39 66.93 Z" />
+                        </g>
+                    </svg>
+                    <p class="slide-kicker">Lo que dicen nuestros alumnos · 2 de 4</p>
+                    <div class="testi-cards">
+                        <div class="testi-card">
+                            <img src="assets/images/testimonials/Referencia2Hernan.webp" alt="Hernán Garro"
+                                class="testi-card-avatar" onerror="this.style.visibility='hidden'">
+                            <div>
+                                <p class="testi-card-name">Hernán Garro</p>
+                                <p class="testi-card-quote">"Me gusta el servicio, prolijo y profesional. Se nota la
+                                    dedicación y la atención fue de 10. ¡Lo recomiendo sin dudas!"</p>
+                            </div>
+                        </div>
+                        <div class="testi-card">
+                            <img src="assets/images/testimonials/Referencia10Pauli.webp" alt="Pauli Smolinsky"
+                                class="testi-card-avatar" onerror="this.style.visibility='hidden'">
+                            <div>
+                                <p class="testi-card-name">Pauli Smolinsky</p>
+                                <p class="testi-card-quote">"Ha sido una muy buena experiencia. Destaco mucho el
+                                    acompañamiento y la dedicación..."</p>
+                            </div>
+                        </div>
+                        <div class="testi-card">
+                            <img src="assets/images/testimonials/Referencia5Ignacio.webp" alt="Ignacio Sanchez"
+                                class="testi-card-avatar" onerror="this.style.visibility='hidden'">
+                            <div>
+                                <p class="testi-card-name">Ignacio Sanchez</p>
+                                <p class="testi-card-quote">"Los planes son excelentes y súper claros. Todo está bien
+                                    explicado y es fácil de seguir. Además, los videos de ejemplo de cada ejercicio
+                                    ayudan muchísimo a entender bien la técnica y evitar errores. El profe Juan es un
+                                    genio, muy buena onda, siempre predispuesto y atento para dar una mano cuando lo
+                                    necesitás. Se nota el compromiso y la dedicación que le pone a todo."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide testi-group-slide" id="slide-testi-3" data-duration="8000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <div class="slide-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="45.00 18.00 122.00 120.00"
+                        class="testi-slide-logo" role="img" aria-label="STABILITY">
+                        <g class="gear-rotate">
+                            <path fill="#1c3355"
+                                d="M 114.50 75.37 Q 102.16 88.43 84.71 90.64 C 71.16 92.35 58.12 86.55 49.07 76.16 Q 47.60 74.47 47.49 72.52 A 1.81 1.81 0.0 0 1 48.81 70.68 L 56.87 68.43 A 2.09 2.08 -1.7 0 0 58.34 66.88 Q 59.99 59.49 63.50 54.18 Q 63.66 53.95 64.83 51.61 A 0.66 0.66 0.0 0 0 64.81 51.00 L 60.05 42.75 A 0.96 0.96 0.0 0 1 60.20 41.58 L 68.80 32.98 A 0.82 0.81 37.2 0 1 69.79 32.85 L 78.24 37.73 A 0.65 0.64 42.8 0 0 78.92 37.71 Q 83.72 34.49 89.64 32.38 C 91.30 31.79 93.33 31.55 95.27 30.82 A 0.87 0.86 86.9 0 0 95.81 30.21 L 97.99 21.12 A 0.70 0.69 -83.0 0 1 98.66 20.59 L 111.52 20.59 A 0.45 0.44 -7.7 0 1 111.95 20.91 L 114.59 30.32 A 0.81 0.80 88.1 0 0 115.20 30.90 Q 123.77 32.81 131.15 37.66 A 0.77 0.77 0.0 0 0 131.96 37.68 L 140.09 32.99 A 1.22 1.21 52.3 0 1 141.55 33.18 L 150.14 41.77 A 0.81 0.81 0.0 0 1 150.25 42.78 Q 147.88 46.59 145.54 50.51 Q 145.35 50.82 145.36 52.29 A 0.57 0.57 0.0 0 1 144.94 52.85 L 130.06 57.02 A 0.95 0.93 -30.2 0 1 129.16 56.79 C 126.63 54.36 124.57 52.33 122.18 50.87 Q 110.59 43.80 98.30 46.59 C 85.40 49.53 75.98 59.50 73.55 72.52 Q 72.93 75.86 73.12 78.27 A 0.98 0.98 0.0 0 0 73.60 79.04 C 81.75 83.75 92.61 83.72 101.61 80.92 Q 107.92 78.95 114.20 75.01 A 0.24 0.24 0.0 0 1 114.50 75.37 Z" />
+                            <path fill="#c41b1a"
+                                d="M 151.39 66.93 L 152.44 67.97 A 2.56 2.52 74.1 0 0 153.62 68.64 L 161.81 70.60 A 0.98 0.98 0.0 0 1 162.56 71.55 L 162.56 83.88 A 0.75 0.75 0.0 0 1 162.01 84.60 L 152.91 87.15 A 1.14 1.14 0.0 0 0 152.10 88.00 Q 150.14 96.47 145.69 103.43 A 1.29 1.28 -43.4 0 0 145.65 104.77 L 150.40 113.00 A 0.73 0.73 0.0 0 1 150.29 113.88 L 141.44 122.72 A 0.89 0.88 -52.8 0 1 140.37 122.87 L 132.18 118.14 A 1.16 1.14 43.1 0 0 130.97 118.17 Q 123.51 122.96 114.94 124.89 A 0.90 0.89 -89.5 0 0 114.26 125.56 L 112.07 134.70 A 0.83 0.83 0.0 0 1 111.26 135.34 L 98.81 135.34 A 0.61 0.60 81.6 0 1 98.23 134.90 L 95.52 125.22 A 0.55 0.53 3.7 0 0 95.19 124.86 C 93.60 124.25 91.41 123.97 90.04 123.49 Q 84.26 121.43 78.98 118.14 A 0.89 0.88 -43.4 0 0 78.06 118.12 L 69.68 122.96 A 0.68 0.68 0.0 0 1 68.86 122.85 L 59.90 113.89 A 0.76 0.75 -53.0 0 1 59.78 112.99 L 64.84 104.23 A 0.44 0.44 0.0 0 0 64.82 103.76 Q 60.63 97.77 58.65 90.48 A 0.35 0.34 -84.2 0 1 59.14 90.08 Q 75.85 98.81 94.14 93.33 C 105.65 89.88 115.49 81.95 123.31 73.08 A 0.94 0.93 -48.7 0 0 123.23 71.77 L 116.88 66.16 A 0.47 0.47 0.0 0 1 117.07 65.36 L 147.45 56.86 A 0.60 0.59 86.6 0 1 148.20 57.53 L 143.22 88.44 A 0.43 0.42 -64.4 0 1 142.52 88.69 L 136.20 83.10 A 1.13 1.13 0.0 0 0 134.60 83.20 C 124.70 94.59 112.69 102.64 97.87 105.49 C 95.43 105.96 93.37 105.76 91.39 106.39 A 0.26 0.26 0.0 0 0 91.37 106.87 C 108.94 114.51 127.45 106.69 134.95 89.33 A 0.74 0.74 0.0 0 1 136.12 89.07 L 145.67 97.52 A 0.45 0.45 0.0 0 0 146.41 97.25 L 151.29 66.96 A 0.06 0.06 0.0 0 1 151.39 66.93 Z" />
+                        </g>
+                    </svg>
+                    <p class="slide-kicker">Lo que dicen nuestros alumnos · 3 de 4</p>
+                    <div class="testi-cards">
+                        <div class="testi-card">
+                            <img src="assets/images/testimonials/Referencia4Nicole.webp" alt="Nicole Gimena"
+                                class="testi-card-avatar" onerror="this.style.visibility='hidden'">
+                            <div>
+                                <p class="testi-card-name">Nicole Gimena</p>
+                                <p class="testi-card-quote">"Entrando al 5to mes entrenando con Stability.ar 🤍
+                                    Sinceramente fue de las mejores decisiones que tomé para mí. Más allá de lo físico,
+                                    me ayudaron muchísimo a generar el hábito, ganar confianza en mí misma y mantener
+                                    constancia con el entrenamiento. El seguimiento y el apoyo de los chicos hizo toda
+                                    la diferencia. Gracias por acompañarme en este proceso y motivarme incluso en los
+                                    días donde menos ganas tenía ✨"</p>
+                            </div>
+                        </div>
+                        <div class="testi-card">
+                            <img src="assets/images/testimonials/Referencia8Mica.webp" alt="Mica Sola"
+                                class="testi-card-avatar" onerror="this.style.visibility='hidden'">
+                            <div>
+                                <p class="testi-card-name">Mica Sola</p>
+                                <p class="testi-card-quote">"Llevo 1 año y medio entrenando con los chicos de Stability
+                                    y fue una de las mejores decisiones comenzar con ellos. Comencé a ver cambios
+                                    físicos y eso me motivó a crear una constancia y disciplina en mi entrenamiento.
+                                    Empecé a mejorar mis hábitos alimenticios y a ser más consciente de las
+                                    respiraciones en cada ejercicio. Estoy muy emocionada por lo que se viene."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="slide testi-group-slide" id="slide-testi-4" data-duration="8000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <div class="slide-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="45.00 18.00 122.00 120.00"
+                        class="testi-slide-logo" role="img" aria-label="STABILITY">
+                        <g class="gear-rotate">
+                            <path fill="#1c3355"
+                                d="M 114.50 75.37 Q 102.16 88.43 84.71 90.64 C 71.16 92.35 58.12 86.55 49.07 76.16 Q 47.60 74.47 47.49 72.52 A 1.81 1.81 0.0 0 1 48.81 70.68 L 56.87 68.43 A 2.09 2.08 -1.7 0 0 58.34 66.88 Q 59.99 59.49 63.50 54.18 Q 63.66 53.95 64.83 51.61 A 0.66 0.66 0.0 0 0 64.81 51.00 L 60.05 42.75 A 0.96 0.96 0.0 0 1 60.20 41.58 L 68.80 32.98 A 0.82 0.81 37.2 0 1 69.79 32.85 L 78.24 37.73 A 0.65 0.64 42.8 0 0 78.92 37.71 Q 83.72 34.49 89.64 32.38 C 91.30 31.79 93.33 31.55 95.27 30.82 A 0.87 0.86 86.9 0 0 95.81 30.21 L 97.99 21.12 A 0.70 0.69 -83.0 0 1 98.66 20.59 L 111.52 20.59 A 0.45 0.44 -7.7 0 1 111.95 20.91 L 114.59 30.32 A 0.81 0.80 88.1 0 0 115.20 30.90 Q 123.77 32.81 131.15 37.66 A 0.77 0.77 0.0 0 0 131.96 37.68 L 140.09 32.99 A 1.22 1.21 52.3 0 1 141.55 33.18 L 150.14 41.77 A 0.81 0.81 0.0 0 1 150.25 42.78 Q 147.88 46.59 145.54 50.51 Q 145.35 50.82 145.36 52.29 A 0.57 0.57 0.0 0 1 144.94 52.85 L 130.06 57.02 A 0.95 0.93 -30.2 0 1 129.16 56.79 C 126.63 54.36 124.57 52.33 122.18 50.87 Q 110.59 43.80 98.30 46.59 C 85.40 49.53 75.98 59.50 73.55 72.52 Q 72.93 75.86 73.12 78.27 A 0.98 0.98 0.0 0 0 73.60 79.04 C 81.75 83.75 92.61 83.72 101.61 80.92 Q 107.92 78.95 114.20 75.01 A 0.24 0.24 0.0 0 1 114.50 75.37 Z" />
+                            <path fill="#c41b1a"
+                                d="M 151.39 66.93 L 152.44 67.97 A 2.56 2.52 74.1 0 0 153.62 68.64 L 161.81 70.60 A 0.98 0.98 0.0 0 1 162.56 71.55 L 162.56 83.88 A 0.75 0.75 0.0 0 1 162.01 84.60 L 152.91 87.15 A 1.14 1.14 0.0 0 0 152.10 88.00 Q 150.14 96.47 145.69 103.43 A 1.29 1.28 -43.4 0 0 145.65 104.77 L 150.40 113.00 A 0.73 0.73 0.0 0 1 150.29 113.88 L 141.44 122.72 A 0.89 0.88 -52.8 0 1 140.37 122.87 L 132.18 118.14 A 1.16 1.14 43.1 0 0 130.97 118.17 Q 123.51 122.96 114.94 124.89 A 0.90 0.89 -89.5 0 0 114.26 125.56 L 112.07 134.70 A 0.83 0.83 0.0 0 1 111.26 135.34 L 98.81 135.34 A 0.61 0.60 81.6 0 1 98.23 134.90 L 95.52 125.22 A 0.55 0.53 3.7 0 0 95.19 124.86 C 93.60 124.25 91.41 123.97 90.04 123.49 Q 84.26 121.43 78.98 118.14 A 0.89 0.88 -43.4 0 0 78.06 118.12 L 69.68 122.96 A 0.68 0.68 0.0 0 1 68.86 122.85 L 59.90 113.89 A 0.76 0.75 -53.0 0 1 59.78 112.99 L 64.84 104.23 A 0.44 0.44 0.0 0 0 64.82 103.76 Q 60.63 97.77 58.65 90.48 A 0.35 0.34 -84.2 0 1 59.14 90.08 Q 75.85 98.81 94.14 93.33 C 105.65 89.88 115.49 81.95 123.31 73.08 A 0.94 0.93 -48.7 0 0 123.23 71.77 L 116.88 66.16 A 0.47 0.47 0.0 0 1 117.07 65.36 L 147.45 56.86 A 0.60 0.59 86.6 0 1 148.20 57.53 L 143.22 88.44 A 0.43 0.42 -64.4 0 1 142.52 88.69 L 136.20 83.10 A 1.13 1.13 0.0 0 0 134.60 83.20 C 124.70 94.59 112.69 102.64 97.87 105.49 C 95.43 105.96 93.37 105.76 91.39 106.39 A 0.26 0.26 0.0 0 0 91.37 106.87 C 108.94 114.51 127.45 106.69 134.95 89.33 A 0.74 0.74 0.0 0 1 136.12 89.07 L 145.67 97.52 A 0.45 0.45 0.0 0 0 146.41 97.25 L 151.29 66.96 A 0.06 0.06 0.0 0 1 151.39 66.93 Z" />
+                        </g>
+                    </svg>
+                    <p class="slide-kicker">Lo que dicen nuestros alumnos · 4 de 4</p>
+                    <div class="testi-cards">
+                        <div class="testi-card">
+                            <img src="assets/images/testimonials/Referencia7Juli.webp" alt="Juli Becerra"
+                                class="testi-card-avatar" onerror="this.style.visibility='hidden'">
+                            <div>
+                                <p class="testi-card-name">Juli Becerra</p>
+                                <p class="testi-card-quote">"Desde que empecé con los chicos de Stability mejoré
+                                    considerablemente todo lo referido a movilidad articular. Pude aprender y
+                                    desarrollar buena técnica en todos los ejercicios planteados. Me gusta la idea de un
+                                    entrenamiento más consciente, con objetivos puntuales. El acompañamiento de Agus en
+                                    estos meses ha sido genial. Sé que tengo mucho por mejorar y aprender. ¡Espero sea
+                                    de la mano de los chicos de Stability!"</p>
+                            </div>
+                        </div>
+                        <div class="testi-card">
+                            <img src="assets/images/testimonials/Referencia9Nacho.webp" alt="Nacho Bibiloni"
+                                class="testi-card-avatar" onerror="this.style.visibility='hidden'">
+                            <div>
+                                <p class="testi-card-name">Nacho Bibiloni</p>
+                                <p class="testi-card-quote">"La verdad que estoy muy conforme con Stability. La app está
+                                    muy buena porque, además de las explicaciones de los profes, tiene videos de los
+                                    ejercicios para volver a verlos cuando lo necesitás. También podés seguir tu
+                                    progreso semana a semana, lo que te motiva mucho. Sumado al feedback constante y la
+                                    buena onda de los profes, hacen que entrenar sea algo que disfrutás y no una
+                                    obligación."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ FAQ ============ -->
+            <section class="slide" id="slide-faq" data-duration="12000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <div class="slide-content">
+                    <p class="slide-kicker">Preguntas Frecuentes</p>
+                    <h2 class="slide-title">Resolvemos tus dudas</h2>
+                    <div class="faq-container interactive" id="faqAccordion">
+                        <div class="faq-item interactive">
+                            <button type="button" class="faq-question interactive" aria-expanded="false">
+                                <span>1. ¿Importan mi edad/peso/altura?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    No, solamente importan las ganas que tengas de empezar. Tus ganas definen hacia
+                                    dónde vamos y hasta dónde podemos llegar.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item interactive">
+                            <button type="button" class="faq-question interactive" aria-expanded="false">
+                                <span>2. ¿Puedo entrenar en cualquier lugar?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    Sí, desde cualquier parte del mundo. Solamente necesitás conexión a internet y tu
+                                    celular.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item interactive">
+                            <button type="button" class="faq-question interactive" aria-expanded="false">
+                                <span>3. ¿Y si nunca entrené antes?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    Mejor todavía. El plan se arma desde donde estás vos, no desde un estándar. La
+                                    progresión es parte del método.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item interactive">
+                            <button type="button" class="faq-question interactive" aria-expanded="false">
+                                <span>4. ¿Cómo es la comunicación con mi entrenador?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    Directa y constante a través de la app y WhatsApp, así nunca quedás con dudas sobre
+                                    qué hacer o cómo hacerlo.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="faq-item interactive">
+                            <button type="button" class="faq-question interactive" aria-expanded="false">
+                                <span>5. ¿Necesito equipamiento o gimnasio?</span>
+                                <svg class="faq-icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z" />
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">
+                                    No es necesario, podemos adaptar el entrenamiento a lo que tengas disponible: ya sea
+                                    en tu casa o en el gimnasio.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ CONTACTO ============ -->
+            <section class="slide" id="slide-contacto" data-duration="9000">
+                <button class="tap-zone tap-zone--prev" aria-label="Historia anterior"></button>
+                <button class="tap-zone tap-zone--next" aria-label="Historia siguiente"></button>
+                <div class="slide-content">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 209.00 213.00"
+                        class="hero-logo-img" role="img" aria-label="STABILITY Logo">
+                        <g stroke-width="2.00" fill="none" stroke-linecap="butt">
+                            <path stroke="#121f2f" vector-effect="non-scaling-stroke"
+                                d="M 31.66 159.19 Q 31.44 159.70 31.47 160.22" />
+                            <path stroke="#121f2f" vector-effect="non-scaling-stroke"
+                                d="M 12.89 161.04 L 12.87 159.21" />
+                        </g>
+                        <!-- Tuerca giratoria -->
+                        <g class="gear-rotate">
+                            <path fill="#1c3355"
+                                d="M 114.50 75.37 Q 102.16 88.43 84.71 90.64 C 71.16 92.35 58.12 86.55 49.07 76.16 Q 47.60 74.47 47.49 72.52 A 1.81 1.81 0.0 0 1 48.81 70.68 L 56.87 68.43 A 2.09 2.08 -1.7 0 0 58.34 66.88 Q 59.99 59.49 63.50 54.18 Q 63.66 53.95 64.83 51.61 A 0.66 0.66 0.0 0 0 64.81 51.00 L 60.05 42.75 A 0.96 0.96 0.0 0 1 60.20 41.58 L 68.80 32.98 A 0.82 0.81 37.2 0 1 69.79 32.85 L 78.24 37.73 A 0.65 0.64 42.8 0 0 78.92 37.71 Q 83.72 34.49 89.64 32.38 C 91.30 31.79 93.33 31.55 95.27 30.82 A 0.87 0.86 86.9 0 0 95.81 30.21 L 97.99 21.12 A 0.70 0.69 -83.0 0 1 98.66 20.59 L 111.52 20.59 A 0.45 0.44 -7.7 0 1 111.95 20.91 L 114.59 30.32 A 0.81 0.80 88.1 0 0 115.20 30.90 Q 123.77 32.81 131.15 37.66 A 0.77 0.77 0.0 0 0 131.96 37.68 L 140.09 32.99 A 1.22 1.21 52.3 0 1 141.55 33.18 L 150.14 41.77 A 0.81 0.81 0.0 0 1 150.25 42.78 Q 147.88 46.59 145.54 50.51 Q 145.35 50.82 145.36 52.29 A 0.57 0.57 0.0 0 1 144.94 52.85 L 130.06 57.02 A 0.95 0.93 -30.2 0 1 129.16 56.79 C 126.63 54.36 124.57 52.33 122.18 50.87 Q 110.59 43.80 98.30 46.59 C 85.40 49.53 75.98 59.50 73.55 72.52 Q 72.93 75.86 73.12 78.27 A 0.98 0.98 0.0 0 0 73.60 79.04 C 81.75 83.75 92.61 83.72 101.61 80.92 Q 107.92 78.95 114.20 75.01 A 0.24 0.24 0.0 0 1 114.50 75.37 Z" />
+                            <path fill="#c41b1a"
+                                d="M 151.39 66.93 L 152.44 67.97 A 2.56 2.52 74.1 0 0 153.62 68.64 L 161.81 70.60 A 0.98 0.98 0.0 0 1 162.56 71.55 L 162.56 83.88 A 0.75 0.75 0.0 0 1 162.01 84.60 L 152.91 87.15 A 1.14 1.14 0.0 0 0 152.10 88.00 Q 150.14 96.47 145.69 103.43 A 1.29 1.28 -43.4 0 0 145.65 104.77 L 150.40 113.00 A 0.73 0.73 0.0 0 1 150.29 113.88 L 141.44 122.72 A 0.89 0.88 -52.8 0 1 140.37 122.87 L 132.18 118.14 A 1.16 1.14 43.1 0 0 130.97 118.17 Q 123.51 122.96 114.94 124.89 A 0.90 0.89 -89.5 0 0 114.26 125.56 L 112.07 134.70 A 0.83 0.83 0.0 0 1 111.26 135.34 L 98.81 135.34 A 0.61 0.60 81.6 0 1 98.23 134.90 L 95.52 125.22 A 0.55 0.53 3.7 0 0 95.19 124.86 C 93.60 124.25 91.41 123.97 90.04 123.49 Q 84.26 121.43 78.98 118.14 A 0.89 0.88 -43.4 0 0 78.06 118.12 L 69.68 122.96 A 0.68 0.68 0.0 0 1 68.86 122.85 L 59.90 113.89 A 0.76 0.75 -53.0 0 1 59.78 112.99 L 64.84 104.23 A 0.44 0.44 0.0 0 0 64.82 103.76 Q 60.63 97.77 58.65 90.48 A 0.35 0.34 -84.2 0 1 59.14 90.08 Q 75.85 98.81 94.14 93.33 C 105.65 89.88 115.49 81.95 123.31 73.08 A 0.94 0.93 -48.7 0 0 123.23 71.77 L 116.88 66.16 A 0.47 0.47 0.0 0 1 117.07 65.36 L 147.45 56.86 A 0.60 0.59 86.6 0 1 148.20 57.53 L 143.22 88.44 A 0.43 0.42 -64.4 0 1 142.52 88.69 L 136.20 83.10 A 1.13 1.13 0.0 0 0 134.60 83.20 C 124.70 94.59 112.69 102.64 97.87 105.49 C 95.43 105.96 93.37 105.76 91.39 106.39 A 0.26 0.26 0.0 0 0 91.37 106.87 C 108.94 114.51 127.45 106.69 134.95 89.33 A 0.74 0.74 0.0 0 1 136.12 89.07 L 145.67 97.52 A 0.45 0.45 0.0 0 0 146.41 97.25 L 151.29 66.96 A 0.06 0.06 0.0 0 1 151.39 66.93 Z" />
+                        </g>
+                        <!-- Texto y detalles fijos -->
+                        <g fill="#1c3355">
+                            <path
+                                d="M 31.66 159.19 Q 31.44 159.70 31.47 160.22 L 26.16 160.22 A 0.99 0.99 0.0 0 1 25.32 159.75 C 23.79 157.25 19.76 156.20 19.61 159.95 A 2.58 2.27 8.7 0 0 21.59 162.32 C 24.41 162.99 30.67 164.75 31.62 168.08 Q 32.92 172.65 30.38 175.37 C 26.61 179.39 19.83 179.18 15.51 176.10 Q 13.63 174.76 12.49 170.79 A 0.23 0.23 0.0 0 1 12.71 170.50 L 19.11 170.50 A 0.33 0.32 -8.5 0 1 19.42 170.72 Q 20.59 174.53 24.92 172.57 A 1.20 1.19 -3.6 0 0 25.56 171.85 Q 26.23 169.70 23.95 168.84 Q 19.92 167.32 17.46 166.45 Q 13.64 165.08 12.89 161.04 L 12.87 159.21 Q 14.08 153.83 19.25 152.95 C 24.66 152.02 30.17 153.23 31.66 159.19 Z" />
+                            <path
+                                d="M 185.85 163.14 Q 186.06 163.14 186.13 162.97 Q 188.30 158.30 190.37 153.84 A 1.43 1.42 12.2 0 1 191.67 153.01 L 197.00 153.01 A 0.50 0.50 0.0 0 1 197.44 153.75 L 189.21 169.33 A 2.32 2.22 60.3 0 0 188.94 170.41 L 188.94 177.47 A 0.68 0.67 88.8 0 1 188.30 178.15 Q 187.83 178.17 185.78 178.16 Q 183.73 178.15 183.26 178.13 A 0.68 0.67 -88.3 0 1 182.63 177.44 L 182.69 170.38 A 2.32 2.22 -59.8 0 0 182.43 169.30 L 174.33 153.65 A 0.50 0.50 0.0 0 1 174.78 152.91 L 180.11 152.96 A 1.43 1.42 -11.7 0 1 181.40 153.80 Q 183.43 158.28 185.56 162.97 Q 185.64 163.14 185.85 163.14 Z" />
+                            <path
+                                d="M 45.33 152.91 Q 49.71 152.94 54.53 152.98 A 0.64 0.64 0.0 0 1 55.17 153.62 L 55.17 157.37 A 0.59 0.59 0.0 0 1 54.58 157.96 L 48.77 157.96 A 0.43 0.43 0.0 0 0 48.34 158.39 L 48.34 177.77 A 0.39 0.39 0.0 0 1 47.97 178.16 Q 47.39 178.18 45.20 178.17 Q 43.01 178.15 42.43 178.13 A 0.39 0.39 0.0 0 1 42.07 177.74 L 42.26 158.36 A 0.43 0.43 0.0 0 0 41.83 157.93 L 36.02 157.87 A 0.59 0.59 0.0 0 1 35.44 157.27 L 35.47 153.52 A 0.64 0.64 0.0 0 1 36.12 152.89 Q 40.94 152.89 45.33 152.91 Z" />
+                            <path
+                                d="M 70.13 152.94 Q 71.05 152.94 72.82 152.94 A 1.20 1.20 0.0 0 1 73.93 153.70 L 82.95 177.32 A 0.62 0.62 0.0 0 1 82.37 178.16 L 77.69 178.16 A 1.48 1.47 -10.3 0 1 76.31 177.21 L 75.13 174.12 A 0.68 0.68 0.0 0 0 74.47 173.68 Q 72.27 173.72 70.16 173.72 Q 68.05 173.73 65.85 173.69 A 0.68 0.68 0.0 0 0 65.19 174.14 L 64.02 177.23 A 1.48 1.47 10.1 0 1 62.65 178.19 L 57.97 178.20 A 0.62 0.62 0.0 0 1 57.38 177.36 L 66.32 153.71 A 1.20 1.20 0.0 0 1 67.44 152.95 Q 69.20 152.94 70.13 152.94 Z M 67.57 168.71 L 72.66 168.71 A 0.55 0.55 0.0 0 0 73.17 167.96 L 70.40 160.69 A 0.38 0.38 0.0 0 0 69.69 160.71 L 67.16 168.14 A 0.43 0.43 0.0 0 0 67.57 168.71 Z" />
+                            <path
+                                d="M 86.71 177.42 L 86.71 153.34 A 0.37 0.37 0.0 0 1 87.08 152.97 Q 94.18 152.85 99.23 153.00 Q 103.74 153.13 105.69 156.04 A 2.70 2.64 -71.0 0 1 106.05 156.80 Q 107.59 161.82 104.21 164.54 A 0.66 0.65 48.0 0 0 104.16 165.52 L 106.47 167.84 A 1.77 1.72 16.8 0 1 106.94 168.69 Q 108.79 176.90 100.19 178.04 Q 98.49 178.26 87.41 178.14 A 0.72 0.71 -89.6 0 1 86.71 177.42 Z M 92.90 160.21 L 92.89 161.20 Q 92.75 161.90 92.84 162.37 A 0.83 0.81 -5.5 0 0 93.65 163.02 L 98.15 163.02 A 2.17 2.17 0.0 0 0 100.32 160.85 L 100.32 160.27 A 2.27 2.26 90.0 0 0 98.06 158.00 L 93.57 158.00 A 0.66 0.66 0.0 0 0 92.91 158.65 L 92.90 160.21 Z M 92.90 168.46 Q 92.78 169.02 92.94 169.55 L 92.85 172.14 A 0.64 0.63 -87.1 0 0 93.43 172.79 Q 96.22 173.03 98.91 172.80 A 2.28 2.27 -87.7 0 0 100.96 170.90 C 101.63 166.87 96.09 167.48 93.43 167.54 A 0.56 0.56 0.0 0 0 92.91 167.93 Q 92.84 168.18 92.90 168.46 Z" />
+                            <rect x="111.61" y="152.97" width="6.22" height="25.22" rx="0.67" />
+                            <path
+                                d="M 123.30 177.54 L 123.30 153.55 A 0.62 0.62 0.0 0 1 123.92 152.93 L 128.80 152.93 A 0.62 0.62 0.0 0 1 129.42 153.55 L 129.42 172.48 A 0.62 0.62 0.0 0 0 130.04 173.10 L 137.42 173.10 A 0.62 0.62 0.0 0 1 138.04 173.72 L 138.04 177.54 A 0.62 0.62 0.0 0 1 137.42 178.16 L 123.92 178.16 A 0.62 0.62 0.0 0 1 123.30 177.54 Z" />
+                            <rect x="-3.13" y="-12.61" transform="translate(144.75,165.58) rotate(-0.1)" width="6.26"
+                                height="25.22" rx="0.56" />
+                            <path
+                                d="M 161.72 178.19 Q 159.53 178.18 158.94 178.16 A 0.39 0.39 0.0 0 1 158.58 177.77 L 158.73 158.36 A 0.43 0.43 0.0 0 0 158.30 157.93 L 152.48 157.88 A 0.59 0.59 0.0 0 1 151.90 157.29 L 151.93 153.53 A 0.64 0.64 0.0 0 1 152.57 152.90 Q 157.40 152.89 161.79 152.90 Q 166.18 152.92 171.01 152.95 A 0.64 0.64 0.0 0 1 171.65 153.59 L 171.66 157.34 A 0.59 0.59 0.0 0 1 171.07 157.94 L 165.25 157.95 A 0.43 0.43 0.0 0 0 164.82 158.38 L 164.86 177.78 A 0.39 0.39 0.0 0 1 164.49 178.17 Q 163.91 178.19 161.72 178.19 Z" />
+                        </g>
+                        <g fill="#080a09" fill-opacity="0.996">
+                            <path d="M 12.87 159.21 L 12.89 161.04 L 12.87 159.21 Z" />
+                            <path d="M 31.47 160.22 Q 31.44 159.70 31.66 159.19 Q 31.87 160.21 31.47 160.22 Z" />
+                            <path
+                                d="M 95.88 196.48 A 0.47 0.47 0.0 0 0 96.76 196.25 L 96.78 190.27 A 0.54 0.54 0.0 0 1 97.33 189.73 L 97.72 189.73 A 0.60 0.60 0.0 0 1 98.32 190.33 L 98.28 199.17 A 1.02 1.02 0.0 0 1 96.37 199.68 L 92.49 192.90 A 0.43 0.43 0.0 0 0 91.69 193.11 L 91.66 199.15 A 0.81 0.81 0.0 0 1 90.85 199.95 L 90.57 199.95 A 0.46 0.46 0.0 0 1 90.11 199.49 L 90.15 190.57 A 1.09 1.09 0.0 0 1 92.19 190.03 L 95.88 196.48 Z" />
+                            <path
+                                d="M 47.55 194.83 Q 47.52 191.00 47.54 190.43 A 0.74 0.74 0.0 0 1 48.26 189.71 L 52.46 189.61 A 0.62 0.61 -1.3 0 1 53.10 190.21 L 53.10 190.49 A 0.41 0.40 -1.3 0 1 52.70 190.90 L 49.90 190.97 A 0.83 0.83 0.0 0 0 49.08 191.82 L 49.12 193.31 A 0.88 0.87 -4.8 0 0 50.12 194.16 Q 53.00 193.73 52.92 194.80 Q 53.03 195.82 50.13 195.45 A 0.88 0.87 3.7 0 0 49.15 196.31 L 49.14 197.81 A 0.83 0.83 0.0 0 0 49.97 198.65 L 52.78 198.66 A 0.41 0.40 0.2 0 1 53.19 199.06 L 53.18 199.34 A 0.62 0.61 0.2 0 1 52.56 199.95 L 48.36 199.94 A 0.74 0.74 0.0 0 1 47.62 199.23 Q 47.59 198.66 47.55 194.83 Z" />
+                            <path
+                                d="M 60.91 196.60 A 0.48 0.48 0.0 0 0 61.80 196.37 L 61.83 190.34 A 0.55 0.55 0.0 0 1 62.38 189.79 L 62.76 189.79 A 0.61 0.61 0.0 0 1 63.37 190.41 L 63.33 199.31 A 1.03 1.03 0.0 0 1 61.40 199.82 L 57.50 192.99 A 0.43 0.43 0.0 0 0 56.69 193.21 L 56.66 199.28 A 0.82 0.82 0.0 0 1 55.84 200.10 L 55.57 200.09 A 0.47 0.47 0.0 0 1 55.10 199.62 L 55.14 190.64 A 1.10 1.10 0.0 0 1 57.19 190.10 L 60.91 196.60 Z" />
+                            <path
+                                d="M 68.18 200.01 Q 67.34 200.00 67.40 197.95 Q 67.51 193.65 67.44 191.47 A 0.65 0.64 -0.7 0 0 66.80 190.85 L 65.28 190.85 A 0.36 0.35 -89.7 0 1 64.93 190.49 L 64.93 190.20 A 0.28 0.28 0.0 0 1 65.17 189.92 Q 66.80 189.68 68.30 189.78 Q 69.80 189.70 71.43 189.96 A 0.28 0.28 0.0 0 1 71.66 190.24 L 71.66 190.53 A 0.36 0.35 -89.6 0 1 71.31 190.88 L 69.79 190.87 A 0.65 0.64 1.4 0 0 69.14 191.48 Q 69.04 193.66 69.11 197.96 Q 69.14 200.02 68.18 200.01 Z" />
+                            <path
+                                d="M 74.90 196.64 Q 75.08 198.02 74.73 199.61 A 0.66 0.66 0.0 0 1 73.45 199.67 Q 73.34 199.33 73.39 190.32 A 0.53 0.52 -1.1 0 1 73.90 189.80 C 76.92 189.74 81.02 188.94 80.36 193.68 A 0.90 0.87 72.0 0 1 80.11 194.19 L 78.93 195.36 A 1.21 1.21 0.0 0 0 78.81 196.92 Q 80.56 199.36 80.35 199.67 A 0.95 0.92 47.5 0 1 78.78 199.58 Q 77.09 196.77 76.35 195.97 A 0.84 0.84 0.0 0 0 74.90 196.64 Z M 74.93 191.21 L 74.91 194.07 A 0.35 0.35 0.0 0 0 75.26 194.42 L 76.91 194.43 A 1.94 1.58 0.4 0 0 78.86 192.86 L 78.86 192.46 A 1.94 1.58 0.4 0 0 76.93 190.87 L 75.28 190.86 A 0.35 0.35 0.0 0 0 74.93 191.21 Z" />
+                            <path
+                                d="M 87.90 194.80 Q 88.01 195.81 85.13 195.46 A 0.87 0.87 0.0 0 0 84.15 196.32 L 84.15 197.81 A 0.83 0.83 0.0 0 0 84.98 198.64 L 87.77 198.64 A 0.41 0.40 0.0 0 1 88.18 199.04 L 88.18 199.32 A 0.62 0.61 0.0 0 1 87.56 199.93 L 83.38 199.93 A 0.74 0.74 0.0 0 1 82.64 199.23 Q 82.61 198.66 82.56 194.85 Q 82.51 191.04 82.53 190.46 A 0.74 0.74 0.0 0 1 83.25 189.74 L 87.42 189.63 A 0.62 0.61 -1.5 0 1 88.06 190.23 L 88.07 190.51 A 0.41 0.40 -1.5 0 1 87.67 190.92 L 84.88 190.99 A 0.83 0.83 0.0 0 0 84.07 191.84 L 84.11 193.33 A 0.87 0.87 0.0 0 0 85.11 194.17 Q 87.98 193.74 87.90 194.80 Z" />
+                            <path
+                                d="M 104.45 189.81 Q 104.66 189.81 104.85 189.84 A 0.79 0.77 84.2 0 1 105.44 190.33 L 108.89 199.36 A 0.54 0.54 0.0 0 1 108.44 200.09 L 108.08 200.12 A 0.73 0.72 76.6 0 1 107.34 199.66 L 106.89 198.49 A 0.92 0.92 0.0 0 0 106.03 197.89 Q 105.72 197.88 104.41 197.88 Q 103.11 197.87 102.80 197.87 A 0.92 0.92 0.0 0 0 101.93 198.47 L 101.47 199.64 A 0.73 0.72 -76.1 0 1 100.73 200.09 L 100.37 200.06 A 0.54 0.54 0.0 0 1 99.93 199.32 L 103.45 190.32 A 0.79 0.77 -83.7 0 1 104.04 189.84 Q 104.24 189.80 104.45 189.81 Z M 104.52 196.34 Q 105.27 196.33 105.56 196.21 A 0.65 0.65 0.0 0 0 105.93 195.41 Q 104.83 192.16 104.44 192.17 Q 104.04 192.18 103.07 195.46 A 0.65 0.65 0.0 0 0 103.46 196.25 Q 103.76 196.36 104.52 196.34 Z" />
+                            <path
+                                d="M 112.77 194.27 A 0.37 0.37 0.0 0 0 112.05 194.40 L 112.05 199.27 A 0.81 0.80 -90.0 0 1 111.25 200.08 L 110.86 200.08 A 0.67 0.66 -0.4 0 1 110.19 199.43 Q 110.17 198.00 110.22 190.63 Q 110.23 189.83 111.06 189.76 Q 112.00 189.67 112.43 190.61 Q 113.23 192.36 114.93 196.44 A 0.60 0.60 0.0 0 0 116.01 196.49 L 119.28 190.30 A 0.88 0.88 0.0 0 1 120.94 190.70 L 121.09 199.29 A 0.79 0.78 26.0 0 1 119.68 199.77 Q 118.91 198.75 119.75 195.10 A 0.81 0.81 0.0 0 0 119.33 194.20 L 119.03 194.03 A 0.24 0.24 0.0 0 0 118.70 194.15 L 116.43 199.50 A 0.91 0.90 45.9 0 1 114.75 199.47 L 112.77 194.27 Z" />
+                            <rect x="-0.79" y="-5.07" transform="translate(123.92,194.92) rotate(-0.1)" width="1.58"
+                                height="10.14" rx="0.66" />
+                            <path
+                                d="M 131.95 191.07 L 129.22 191.07 A 1.08 1.08 0.0 0 0 128.14 192.15 L 128.14 192.88 A 1.03 1.03 0.0 0 0 129.15 193.91 L 131.38 193.97 A 0.69 0.69 0.0 0 1 131.59 195.31 Q 131.19 195.45 129.23 195.34 Q 128.55 195.30 128.24 196.06 A 1.92 1.78 -81.7 0 0 130.07 198.72 Q 130.93 198.59 131.81 198.54 A 0.82 0.81 -1.7 0 1 132.68 199.35 L 132.68 199.65 A 0.43 0.42 0.0 0 1 132.25 200.07 L 127.88 200.07 A 1.02 1.01 0.0 0 1 126.86 199.06 L 126.86 190.96 A 1.20 1.19 0.0 0 1 128.06 189.77 L 132.01 189.77 A 0.43 0.43 0.0 0 1 132.44 190.20 L 132.44 190.58 A 0.49 0.49 0.0 0 1 131.95 191.07 Z" />
+                            <path
+                                d="M 141.13 196.33 L 141.13 190.28 A 0.55 0.55 0.0 0 1 141.68 189.73 L 142.07 189.73 A 0.61 0.61 0.0 0 1 142.68 190.34 L 142.68 199.28 A 1.04 1.03 -60.0 0 1 140.75 199.80 L 136.80 192.96 A 0.44 0.43 -60.1 0 0 135.99 193.18 L 135.99 199.28 A 0.82 0.82 0.0 0 1 135.17 200.10 L 134.89 200.10 A 0.47 0.47 0.0 0 1 134.42 199.63 L 134.42 190.61 A 1.10 1.10 0.0 0 1 136.48 190.06 L 140.24 196.57 A 0.48 0.48 0.0 0 0 141.13 196.33 Z" />
+                            <path
+                                d="M 147.73 189.78 Q 149.24 189.69 150.89 189.94 A 0.28 0.28 0.0 0 1 151.12 190.22 L 151.12 190.51 A 0.36 0.35 90.0 0 1 150.77 190.87 L 149.24 190.87 A 0.65 0.64 0.9 0 0 148.59 191.49 Q 148.51 193.68 148.61 198.00 Q 148.66 200.07 147.81 200.08 Q 146.85 200.08 146.89 198.01 Q 146.97 193.68 146.89 191.49 A 0.65 0.64 -1.1 0 0 146.23 190.87 L 144.70 190.88 A 0.36 0.35 89.8 0 1 144.35 190.52 L 144.35 190.23 A 0.28 0.28 0.0 0 1 144.58 189.95 Q 146.23 189.70 147.73 189.78 Z" />
+                            <path
+                                d="M 162.75 194.83 A 5.23 5.23 0.0 0 1 157.52 200.06 A 5.23 5.23 0.0 0 1 152.29 194.83 A 5.23 5.23 0.0 0 1 157.52 189.60 A 5.23 5.23 0.0 0 1 162.75 194.83 Z M 160.9012 194.0660 A 3.14 3.14 0.0 0 0 157.7667 190.9205 L 157.2067 190.9195 A 3.14 3.14 0.0 0 0 154.0612 194.0540 L 154.0588 195.4140 A 3.14 3.14 0.0 0 0 157.1933 198.5595 L 157.7533 198.5605 A 3.14 3.14 0.0 0 0 160.8988 195.4260 L 160.9012 194.0660 Z" />
+                        </g>
+                        <g stroke-width="2.00" fill="none" stroke-linecap="butt">
+                            <path stroke="#121f2f" vector-effect="non-scaling-stroke"
+                                d="M 92.90 160.21 L 92.89 161.20" />
+                            <path stroke="#121f2f" vector-effect="non-scaling-stroke"
+                                d="M 92.90 168.46 Q 92.78 169.02 92.94 169.55" />
+                        </g>
+                        <g fill="#080a09" fill-opacity="0.996">
+                            <path d="M 92.89 161.20 L 92.90 160.21 L 92.89 161.20 Z" />
+                            <path d="M 92.94 169.55 Q 92.78 169.02 92.90 168.46 L 92.94 169.55 Z" />
+                        </g>
+                    </svg>
+                    <p class="slide-kicker">Última historia</p>
+                    <h2 class="slide-title">¿Listo para transformar tu entrenamiento?</h2>
+                    <p class="slide-text">Contanos un poco sobre vos y te contestamos a la brevedad.</p>
+
+                    <form id="contactForm" class="interactive" novalidate>
+                        <div class="form-group">
+                            <label for="contactName" class="form-label">Tu nombre</label>
+                            <input type="text" id="contactName" name="contactName" class="form-input"
+                                placeholder="Tu nombre" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactComment" class="form-label">Tu mensaje</label>
+                            <textarea id="contactComment" name="contactComment" class="form-input" rows="2"
+                                placeholder="Contanos qué te gustaría lograr"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-red submit-btn">Pedir info para comenzar</button>
+                    </form>
+
+                    <div class="saved-banner" id="contactSavedBanner">
+                        <p class="saved-text" id="contactSavedText"></p>
+                        <button class="reset-btn interactive" id="contactResetBtn">Enviar otro mensaje</button>
+                    </div>
+
+                    <a href="https://wa.me/5493512240889?text=Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Stability"
+                        onclick="if (typeof posthog !== 'undefined') posthog.capture('whatsapp_link_click', { ubicacion_cta: 'oferta_final' });"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-blue interactive"
+                        style="width:100%; margin-top:14px;">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.01 2.01c-5.5 0-10 4.5-10 10 0 1.8.5 3.5 1.4 5l-1.5 5.5 5.7-1.5c1.4.8 3.1 1.3 4.8 1.3 5.5 0 10-4.5 10-10s-4.4-10-10.4-10zm5.6 14.1c-.2.6-1.3 1.2-1.9 1.3-.5.1-1.2.2-3.4-.7-2.8-1.2-4.7-4-4.8-4.2s-1.1-1.5-1.1-2.9.7-2.1 1-2.4c.3-.3.6-.4.9-.4.2 0 .4 0 .5.1.2 0 .4-.1.7.5.3.7.9 2.2 1 2.4.1.2.1.4-.1.7-.2.3-.3.5-.5.7-.2.2-.4.4-.2.7.4.7 1.8 2.2 3.8 2.8.5.2.9.3 1.3.1.4-.1.9-.4 1-.7.2-.3.2-.6.1-.7-.1-.2-.3-.3-.6-.5z" />
+                        </svg>
+                        Pedir info para comenzar
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Barra inferior tipo Historia -->
+        <div class="story-bottombar">
+            <div class="story-msg-input interactive">
+                <input type="text" id="msgInput" class="msg-input-field" placeholder="Enviar mensaje..."
+                    aria-label="Escribir un mensaje para WhatsApp" autocomplete="off">
+                <button type="button" class="msg-send-btn" id="msgSendBtn" aria-label="Enviar mensaje por WhatsApp">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+                </button>
+            </div>
+            <button class="story-icon-btn interactive" id="likeBtn" aria-label="Me gusta" aria-pressed="false">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+            </button>
+            <button class="story-icon-btn interactive" id="shareBtn" aria-label="Compartir">
+                <svg viewBox="0 0 24 24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="share-toast" id="shareToast" role="status" aria-live="polite">Link copiado</div>
+
+    </div>
+
+    <script>
+        (function () {
+            'use strict';
+
+            var body = document.body;
+            var storiesViewport = document.getElementById('storiesViewport');
+            var storyLoader = document.getElementById('storyLoader');
+            var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+            var progressEl = document.getElementById('storyProgress');
+            var current = 0;
+            var holdPaused = false;    // transitorio: tap-zone en long-press, o foco en un campo interactivo
+            var manualPaused = false;  // persistente: toggle del botón de pausa del header
+            var pointerActive = false; // interno: hay un pointerdown activo en una tap-zone
+            var storyCompletedCaptured = false; // rastreo de evento único historia_completada
+
+            // ---- Helper seguro de PostHog ----
+            function capturePostHog(event, props) {
+                var ph = window.posthog || (typeof posthog !== 'undefined' ? posthog : null);
+                if (ph && typeof ph.capture === 'function') {
+                    ph.capture(event, props);
+                }
+            }
+
+            // ---- Respuesta Háptica (Vibración) ----
+            function triggerHaptic(pattern) {
+                if (navigator && typeof navigator.vibrate === 'function') {
+                    try { navigator.vibrate(pattern || 12); } catch (err) { }
+                }
+            }
+
+            // ---- Precarga Inteligente (Option 10) y Manejo de Fade-in ----
+            var preloadedUrls = new Set();
+            function preloadSingleUrl(url) {
+                if (!url || preloadedUrls.has(url)) return;
+                preloadedUrls.add(url);
+                var img = new Image();
+                img.decoding = 'async';
+                img.src = url;
+            }
+
+            function preloadSlideAssets(idx) {
+                if (idx < 0 || idx >= slides.length) return;
+                var slide = slides[idx];
+                if (!slide) return;
+                var imgs = slide.querySelectorAll('img[src]');
+                for (var i = 0; i < imgs.length; i++) {
+                    preloadSingleUrl(imgs[i].src);
+                }
+                var bgEls = slide.querySelectorAll('.slide-bg-photo, [style*="background-image"]');
+                for (var j = 0; j < bgEls.length; j++) {
+                    var el = bgEls[j];
+                    if (el.tagName === 'IMG' && el.src) preloadSingleUrl(el.src);
+                    var bg = window.getComputedStyle(el).backgroundImage;
+                    if (bg && bg !== 'none') {
+                        var m = bg.match(/url\(['"]?(.*?)['"]?\)/);
+                        if (m && m[1]) preloadSingleUrl(m[1]);
+                    }
+                }
+            }
+
+            // Inicializar fade-in suave para todas las fotos de fondo
+            document.querySelectorAll('.slide-bg-photo').forEach(function (img) {
+                if (img.complete) {
+                    img.classList.add('is-loaded');
+                } else {
+                    img.addEventListener('load', function () { img.classList.add('is-loaded'); }, { once: true });
+                    img.addEventListener('error', function () { img.style.display = 'none'; }, { once: true });
+                }
+            });
+
+            // ---- Indicador de Carga / Skeleton Loader (Option 11) ----
+            function checkSlideLoaded(idx) {
+                var slide = slides[idx];
+                if (!slide || !storyLoader) return;
+                var imgs = Array.prototype.slice.call(slide.querySelectorAll('img'));
+                var pending = imgs.filter(function (img) {
+                    return !img.complete && img.src;
+                });
+                if (pending.length > 0) {
+                    storyLoader.classList.add('is-loading');
+                    var loadedCount = 0;
+                    pending.forEach(function (img) {
+                        var onFinish = function () {
+                            loadedCount++;
+                            if (loadedCount >= pending.length) {
+                                storyLoader.classList.remove('is-loading');
+                            }
+                        };
+                        img.addEventListener('load', onFinish, { once: true });
+                        img.addEventListener('error', onFinish, { once: true });
+                    });
+                } else {
+                    storyLoader.classList.remove('is-loading');
+                }
+            }
+
+            // ---- Construir la barra de progreso segmentada ----
+            slides.forEach(function (slide, i) {
+                var seg = document.createElement('div');
+                seg.className = 'seg';
+                var fill = document.createElement('span');
+                fill.className = 'seg-fill';
+                seg.appendChild(fill);
+                seg.dataset.index = i;
+                progressEl.appendChild(seg);
+            });
+            var segs = Array.prototype.slice.call(progressEl.children);
+
+            function activeFill() {
+                var seg = segs[current];
+                return seg ? seg.querySelector('.seg-fill') : null;
+            }
+
+            function goTo(index) {
+                if (index < 0 || index >= slides.length) return;
+                var prevSlide = slides[current];
+                if (prevSlide) prevSlide.classList.remove('is-active');
+
+                current = index;
+                slides[current].classList.add('is-active');
+                refreshLikeButton();
+
+                capturePostHog('slide_visto', {
+                    numero_slide: current + 1
+                });
+
+                if (current === slides.length - 1 && !storyCompletedCaptured) {
+                    storyCompletedCaptured = true;
+                    capturePostHog('historia_completada');
+                }
+
+                // Ejecutar precarga inteligente de siguientes y anteriores
+                preloadSlideAssets(current + 1);
+                preloadSlideAssets(current + 2);
+                preloadSlideAssets(current - 1);
+                checkSlideLoaded(current);
+
+                segs.forEach(function (seg, i) {
+                    seg.classList.remove('active', 'done', 'paused');
+                    var fill = seg.querySelector('.seg-fill');
+                    fill.style.animation = 'none';
+                    if (i < current) {
+                        seg.classList.add('done');
+                    } else if (i === current) {
+                        seg.classList.add('active');
+                        var rawDuration = parseInt(slides[current].dataset.duration || '5000', 10);
+                        var duration = Math.round(rawDuration * 1.15); // +15% de tiempo por slide para lectura óptima
+                        void fill.offsetWidth;
+                        fill.style.animation = '';
+                        fill.style.animationDuration = duration + 'ms';
+                        seg.classList.toggle('paused', holdPaused || manualPaused);
+                    }
+                });
+            }
+
+            function next() {
+                if (current >= slides.length - 1) return;
+                capturePostHog('historia_siguiente_click', {
+                    slide_actual: current + 1
+                });
+                triggerHaptic(12);
+                goTo(current + 1);
+            }
+
+            function prev() {
+                triggerHaptic(12);
+                goTo(Math.max(0, current - 1));
+            }
+
+            // Aplica el estado de pausa combinado y oculta las barras si se mantiene presionado el dedo
+            function updatePauseVisual() {
+                var seg = segs[current];
+                var isPausedNow = holdPaused || manualPaused;
+                if (seg) seg.classList.toggle('paused', isPausedNow);
+                if (storiesViewport) {
+                    storiesViewport.classList.toggle('is-paused', isPausedNow);
+                    storiesViewport.classList.toggle('is-holding-pause', holdPaused);
+                }
+            }
+
+            function setPaused(isHeld) {
+                holdPaused = isHeld;
+                updatePauseVisual();
+            }
+
+            // Avanza automáticamente cuando termina la animación del segmento activo
+            progressEl.addEventListener('animationend', function (e) {
+                if (e.target.classList.contains('seg-fill')) next();
+            });
+
+            // ---- Prevenir selección de texto nativa, menús contextuales y zoom ----
+            document.addEventListener('contextmenu', function (e) {
+                if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                    e.preventDefault();
+                }
+            });
+
+            document.addEventListener('selectstart', function (e) {
+                if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                    e.preventDefault();
+                }
+            });
+
+            document.addEventListener('dblclick', function (e) {
+                e.preventDefault();
+            }, { passive: false });
+
+            document.addEventListener('touchstart', function (e) {
+                if (e.touches.length > 1) {
+                    e.preventDefault(); // Evitar pinch-zoom multitouch
+                }
+            }, { passive: false });
+
+            // ---- Doble Tap para Like con Animación de Corazón Flotante ----
+            var lastTapTime = 0;
+            var lastTapX = 0;
+            var lastTapY = 0;
+
+            function createFloatingHeart(x, y) {
+                var heart = document.createElement('div');
+                heart.className = 'floating-heart';
+                heart.style.left = x + 'px';
+                heart.style.top = y + 'px';
+                heart.innerHTML = '<svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>';
+                if (storiesViewport) storiesViewport.appendChild(heart);
+                setTimeout(function () {
+                    if (heart.parentNode) heart.parentNode.removeChild(heart);
+                }, 850);
+            }
+
+            if (storiesViewport) {
+                storiesViewport.addEventListener('click', function (e) {
+                    if (e.target.closest('.interactive') || e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || e.target.tagName === 'TEXTAREA') {
+                        return;
+                    }
+                    var now = Date.now();
+                    var dist = Math.hypot(e.clientX - lastTapX, e.clientY - lastTapY);
+                    if (now - lastTapTime < 320 && dist < 50) {
+                        e.preventDefault();
+                        likedSlides[current] = true;
+                        refreshLikeButton();
+                        triggerHaptic([20, 35, 20]);
+                        var rect = storiesViewport.getBoundingClientRect();
+                        createFloatingHeart(e.clientX - rect.left, e.clientY - rect.top);
+                        lastTapTime = 0;
+                    } else {
+                        lastTapTime = now;
+                        lastTapX = e.clientX;
+                        lastTapY = e.clientY;
+                    }
+                });
+            }
+
+            // ---- Navegación por tap / long-press ----
+            var pointerStart = null;
+
+            document.addEventListener('pointerdown', function (e) {
+                var zone = e.target.closest('.tap-zone');
+                if (!zone) return;
+                pointerStart = { x: e.clientX, y: e.clientY, t: Date.now(), dir: zone.classList.contains('tap-zone--prev') ? 'prev' : 'next' };
+                pointerActive = true;
+                setPaused(true);
+            });
+
+            document.addEventListener('pointerup', function (e) {
+                if (!pointerStart) return;
+                var dt = Date.now() - pointerStart.t;
+                var dx = Math.abs(e.clientX - pointerStart.x);
+                var dy = Math.abs(e.clientY - pointerStart.y);
+                var wasTap = dt < 350 && dx < 10 && dy < 10;
+
+                pointerActive = false;
+                setPaused(false);
+
+                if (wasTap) {
+                    pointerStart.dir === 'prev' ? prev() : next();
+                }
+                pointerStart = null;
+            });
+
+            document.addEventListener('pointercancel', function () {
+                pointerStart = null;
+                pointerActive = false;
+                setPaused(false);
+            });
+
+            // Pausar mientras el foco está en un campo interactivo del SLIDE (formularios, encuesta, etc.)
+            // El campo de mensaje de la barra inferior se excluye a propósito para no ocultar la barra al tipear
+            document.addEventListener('focusin', function (e) {
+                var target = e.target;
+                // Si el foco es en el input de mensaje o está dentro de .story-bottombar → no pausar
+                if (target.id === 'msgInput' || target.closest('.story-bottombar')) return;
+                if (target.closest('.interactive')) setPaused(true);
+            });
+            document.addEventListener('focusout', function (e) {
+                var target = e.target;
+                if (target.id === 'msgInput' || target.closest('.story-bottombar')) return;
+                if (target.closest('.interactive') && !pointerActive) setPaused(false);
+            });
+
+            // Teclado: flechas para navegar
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowRight') next();
+                if (e.key === 'ArrowLeft') prev();
+            });
+
+            // ---- Header: perfil e ícono cerrar ----
+            var profileBtn = document.getElementById('profileBtn');
+            if (profileBtn) {
+                profileBtn.addEventListener('click', function () {
+                    window.open('https://instagram.com/stability.ar', '_blank', 'noopener');
+                });
+            }
+
+            // ---- Control de Música de Fondo ----
+            var bgMusic = document.getElementById('bgMusic');
+            var musicBtn = document.getElementById('musicBtn');
+            var musicPlaying = false;
+
+            function toggleMusic() {
+                if (!bgMusic) return;
+                if (musicPlaying) {
+                    bgMusic.pause();
+                    musicPlaying = false;
+                    if (musicBtn) {
+                        musicBtn.classList.remove('is-playing');
+                        musicBtn.setAttribute('aria-pressed', 'false');
+                    }
+                } else {
+                    bgMusic.volume = 0.35; // Volumen de fondo agradable (35%)
+                    bgMusic.play().then(function () {
+                        musicPlaying = true;
+                        if (musicBtn) {
+                            musicBtn.classList.add('is-playing');
+                            musicBtn.setAttribute('aria-pressed', 'true');
+                        }
+                    }).catch(function () { });
+                }
+            }
+
+            if (musicBtn) {
+                musicBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    triggerHaptic(12);
+                    var estadoResultante = musicPlaying ? 'muted' : 'unmuted';
+                    toggleMusic();
+                    capturePostHog('audio_toggled', {
+                        estado_audio: estadoResultante
+                    });
+                });
+            }
+
+            // Reproducir automáticamente en el primer tap del usuario (requerido por políticas de navegadores)
+            document.addEventListener('pointerdown', function startMusicOnUserAction() {
+                if (!musicPlaying && bgMusic) {
+                    bgMusic.volume = 0.35;
+                    bgMusic.play().then(function () {
+                        musicPlaying = true;
+                        if (musicBtn) {
+                            musicBtn.classList.add('is-playing');
+                            musicBtn.setAttribute('aria-pressed', 'true');
+                        }
+                    }).catch(function () { });
+                }
+                document.removeEventListener('pointerdown', startMusicOnUserAction);
+            }, { once: true });
+            document.getElementById('closeBtn').addEventListener('click', function () {
+                goTo(0);
+            });
+
+            // ---- Botón de pausa explícito (toggle persistente, independiente del long-press) ----
+            var pauseBtn = document.getElementById('pauseBtn');
+            var pauseIconPath = document.getElementById('pauseIcon').querySelector('path');
+            var ICON_PAUSE_D = 'M6 5h4v14H6zM14 5h4v14h-4z';
+            var ICON_PLAY_D = 'M8 5v14l11-7z';
+            pauseBtn.addEventListener('click', function () {
+                manualPaused = !manualPaused;
+                pauseBtn.setAttribute('aria-pressed', String(manualPaused));
+                pauseBtn.setAttribute('aria-label', manualPaused ? 'Reanudar historia' : 'Pausar historia');
+                pauseIconPath.setAttribute('d', manualPaused ? ICON_PLAY_D : ICON_PAUSE_D);
+                updatePauseVisual();
+                if (manualPaused) {
+                    capturePostHog('historia_pausada', {
+                        slide_actual: current + 1
+                    });
+                }
+            });
+
+            // Etiqueta de "tiempo transcurrido", estética, sin backend
+            var loadedAt = Date.now();
+            var elapsedLabel = document.getElementById('elapsedLabel');
+            function updateElapsed() {
+                var mins = Math.floor((Date.now() - loadedAt) / 60000);
+                elapsedLabel.textContent = mins < 1 ? 'ahora' : (mins + 'm');
+            }
+            setInterval(updateElapsed, 30000);
+
+            // ---- Bottom bar: like y compartir ----
+            var likeBtn = document.getElementById('likeBtn');
+            var likedSlides = {}; // like es individual por historia, indexado por número de slide
+
+            function refreshLikeButton() {
+                var isLiked = !!likedSlides[current];
+                likeBtn.classList.remove('liked');
+                likeBtn.setAttribute('aria-pressed', String(isLiked));
+                if (isLiked) {
+                    void likeBtn.offsetWidth;
+                    likeBtn.classList.add('liked');
+                }
+            }
+
+            likeBtn.addEventListener('click', function () {
+                likedSlides[current] = !likedSlides[current];
+                triggerHaptic([15, 20, 15]);
+                refreshLikeButton();
+            });
+
+            var shareToast = document.getElementById('shareToast');
+            function showToast(msg) {
+                shareToast.textContent = msg;
+                shareToast.classList.add('show');
+                setTimeout(function () { shareToast.classList.remove('show'); }, 2200);
+            }
+
+            document.getElementById('shareBtn').addEventListener('click', function () {
+                triggerHaptic(15);
+                var shareData = { title: 'STABILITY', text: 'Mirá la comunidad de entrenamiento Stability', url: window.location.href };
+                if (navigator.share) {
+                    navigator.share(shareData).catch(function () { });
+                } else if (navigator.clipboard) {
+                    navigator.clipboard.writeText(window.location.href).then(function () {
+                        showToast('Link copiado');
+                    }).catch(function () {
+                        showToast('No se pudo copiar el link');
+                    });
+                } else {
+                    showToast('No se pudo copiar el link');
+                }
+            });
+
+            // ---- Input de mensaje: respuesta real de Historia ----
+            var msgInput = document.getElementById('msgInput');
+            var msgSendBtn = document.getElementById('msgSendBtn');
+
+            function updateMsgSendBtn() {
+                if (!msgInput || !msgSendBtn) return;
+                var text = msgInput.value.trim();
+                if (text.length > 0) {
+                    msgSendBtn.classList.add('has-text');
+                } else {
+                    msgSendBtn.classList.remove('has-text');
+                }
+            }
+
+            if (msgInput) {
+                msgInput.addEventListener('pointerdown', function (e) { e.stopPropagation(); });
+                msgInput.addEventListener('touchstart', function (e) { e.stopPropagation(); });
+                msgInput.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    msgInput.focus();
+                });
+                msgInput.addEventListener('input', updateMsgSendBtn);
+                msgInput.addEventListener('change', updateMsgSendBtn);
+                msgInput.addEventListener('keyup', updateMsgSendBtn);
+                msgInput.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        sendStoryMessage();
+                    }
+                });
+                updateMsgSendBtn();
+            }
+
+            function sendStoryMessage() {
+                var text = msgInput.value.trim();
+                if (!text) return;
+                capturePostHog('whatsapp_link_click', {
+                    ubicacion_cta: 'barra_mensaje'
+                });
+                window.location.href = 'https://wa.me/5493512240889?text=' + encodeURIComponent(text);
+                msgInput.value = '';
+                updateMsgSendBtn();
+            }
+
+            if (msgSendBtn) {
+                msgSendBtn.addEventListener('click', sendStoryMessage);
+            }
+
+            // ---- Formulario de registro (nombre + objetivo) ----
+            var objectiveButtons = Array.prototype.slice.call(document.querySelectorAll('.objective-btn'));
+            var userObjectiveInput = document.getElementById('userObjective');
+            var objectiveError = document.getElementById('objectiveError');
+
+            objectiveButtons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    objectiveButtons.forEach(function (b) {
+                        b.classList.remove('selected');
+                        b.setAttribute('aria-pressed', 'false');
+                    });
+                    this.classList.add('selected');
+                    this.setAttribute('aria-pressed', 'true');
+                    userObjectiveInput.value = this.getAttribute('data-value');
+                    objectiveError.style.display = 'none';
+                });
+            });
+
+            var form = document.getElementById('registrationForm');
+            var userNameInput = document.getElementById('userName');
+            var nameError = document.getElementById('nameError');
+            var savedBanner = document.getElementById('savedBanner');
+            var bannerName = document.getElementById('bannerName');
+            var bannerObjective = document.getElementById('bannerObjective');
+            var resetBtn = document.getElementById('resetBtn');
+
+            function checkSavedData() {
+                var savedName = localStorage.getItem('stability_name');
+                var savedObjective = localStorage.getItem('stability_objective');
+                if (savedName && savedObjective) {
+                    form.style.display = 'none';
+                    bannerName.textContent = savedName;
+                    bannerObjective.textContent = savedObjective;
+                    savedBanner.style.display = 'block';
+                } else {
+                    form.style.display = 'block';
+                    savedBanner.style.display = 'none';
+                }
+            }
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var isValid = true;
+
+                var nameVal = userNameInput.value.trim();
+                if (nameVal === '') {
+                    nameError.style.display = 'block';
+                    userNameInput.style.borderColor = '#ff8080';
+                    isValid = false;
+                } else {
+                    nameError.style.display = 'none';
+                    userNameInput.style.borderColor = '';
+                }
+
+                var selectedObjectiveBtn = document.querySelector('.objective-btn.selected');
+                var objectiveVal = (userObjectiveInput.value ? userObjectiveInput.value.trim() : '') || (selectedObjectiveBtn ? (selectedObjectiveBtn.getAttribute('data-value') || selectedObjectiveBtn.textContent.trim()) : '') || localStorage.getItem('stability_objective') || '';
+                if (objectiveVal && !userObjectiveInput.value) {
+                    userObjectiveInput.value = objectiveVal;
+                }
+
+                if (!objectiveVal) {
+                    objectiveError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    objectiveError.style.display = 'none';
+                }
+
+                if (isValid) {
+                    localStorage.setItem('stability_name', nameVal);
+                    localStorage.setItem('stability_objective', objectiveVal);
+                    capturePostHog('registro_completado', {
+                        objetivo_cliente: objectiveVal
+                    });
+                    checkSavedData();
+                    applyObjectiveContent();
+                    applyNamePersonalization();
+                    if (typeof checkContactSaved === 'function') {
+                        checkContactSaved();
+                    }
+                    next();
+                }
+            });
+
+            resetBtn.addEventListener('click', function () {
+                var oldName = localStorage.getItem('stability_name');
+                localStorage.removeItem('stability_name');
+                localStorage.removeItem('stability_objective');
+                userNameInput.value = '';
+                userObjectiveInput.value = '';
+                objectiveButtons.forEach(function (b) {
+                    b.classList.remove('selected');
+                    b.setAttribute('aria-pressed', 'false');
+                });
+                checkSavedData();
+                applyObjectiveContent();
+                applyNamePersonalization();
+                if (typeof contactNameInput !== 'undefined' && contactNameInput && contactNameInput.value === oldName) {
+                    contactNameInput.value = '';
+                }
+                if (typeof checkContactSaved === 'function') {
+                    checkContactSaved();
+                }
+            });
+
+            checkSavedData();
+
+            // ---- Formulario de contacto (nombre + comentario) ----
+            var contactForm = document.getElementById('contactForm');
+            var contactNameInput = document.getElementById('contactName');
+            var contactCommentInput = document.getElementById('contactComment');
+            var contactSavedBanner = document.getElementById('contactSavedBanner');
+            var contactSavedText = document.getElementById('contactSavedText');
+            var contactResetBtn = document.getElementById('contactResetBtn');
+
+            function checkContactSaved() {
+                var savedName = localStorage.getItem('stability_contact_name');
+                var savedComment = localStorage.getItem('stability_contact_comment');
+                if (savedName && savedComment) {
+                    contactForm.style.display = 'none';
+                    contactSavedText.textContent = '¡Gracias, ' + savedName + '! El equipo de Stability se va a comunicar con vos.';
+                    contactSavedBanner.style.display = 'block';
+                } else {
+                    contactForm.style.display = 'block';
+                    contactSavedBanner.style.display = 'none';
+                    if (!contactNameInput.value) {
+                        var registeredName = localStorage.getItem('stability_name');
+                        if (registeredName) contactNameInput.value = registeredName;
+                    }
+                }
+            }
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var nameVal = contactNameInput.value.trim();
+                var commentVal = contactCommentInput.value.trim();
+                if (!nameVal) { contactNameInput.focus(); return; }
+                if (!commentVal) { contactCommentInput.focus(); return; }
+                localStorage.setItem('stability_contact_name', nameVal);
+                localStorage.setItem('stability_contact_comment', commentVal);
+                checkContactSaved();
+
+                capturePostHog('whatsapp_link_click', {
+                    ubicacion_cta: 'formulario_contacto'
+                });
+
+                var wspMessage = 'Hola, soy ' + nameVal + '. ' + commentVal;
+                var wspUrl = 'https://wa.me/5493512240889?text=' + encodeURIComponent(wspMessage);
+                window.location.href = wspUrl;
+            });
+
+            contactResetBtn.addEventListener('click', function () {
+                localStorage.removeItem('stability_contact_name');
+                localStorage.removeItem('stability_contact_comment');
+                contactNameInput.value = '';
+                contactCommentInput.value = '';
+                checkContactSaved();
+            });
+
+            checkContactSaved();
+
+            // ---- Sticker de encuesta interactiva (slide-trigger) ----
+            var pollSticker = document.getElementById('painPoll');
+            if (pollSticker) {
+                var pollOptions = Array.prototype.slice.call(pollSticker.querySelectorAll('.poll-option'));
+                var pollTimer = null;
+
+                // Porcentajes fijos para la encuesta
+                var fixedPercentages = {
+                    tiempo: 52,
+                    guia: 28,
+                    motivacion: 20
+                };
+
+                function renderPollState(selectedOption, animate) {
+                    if (!selectedOption) {
+                        pollSticker.classList.remove('has-voted');
+                        pollOptions.forEach(function (o) {
+                            o.classList.remove('selected');
+                            var fill = o.querySelector('.poll-option-fill');
+                            var percentText = o.querySelector('.poll-option-percent');
+                            if (fill) fill.style.width = '0%';
+                            if (percentText) percentText.textContent = '';
+                        });
+                        return;
+                    }
+
+                    pollSticker.classList.add('has-voted');
+
+                    pollOptions.forEach(function (o) {
+                        var optName = o.getAttribute('data-option');
+                        var isThisSelected = (optName === selectedOption);
+                        o.classList.toggle('selected', isThisSelected);
+
+                        var percent = fixedPercentages[optName] || 0;
+                        var fill = o.querySelector('.poll-option-fill');
+                        var percentText = o.querySelector('.poll-option-percent');
+
+                        if (fill) {
+                            if (animate) {
+                                void fill.offsetWidth; // Forzar reflow para animación suave
+                            }
+                            fill.style.width = percent + '%';
+                        }
+                        if (percentText) {
+                            percentText.textContent = percent + '%';
+                        }
+                    });
+                }
+
+                // Cargar estado guardado en inicialización
+                var savedPain = localStorage.getItem('stability_pain_point');
+                if (savedPain) {
+                    renderPollState(savedPain, false);
+                }
+
+                var optionTextMap = {
+                    'tiempo': 'Falta de tiempo',
+                    'guia': 'No saber por dónde empezar',
+                    'motivacion': 'Falta de constancia o motivación'
+                };
+
+                pollOptions.forEach(function (opt) {
+                    opt.addEventListener('click', function (e) {
+                        e.stopPropagation(); // Evitar que el click se propague al viewport
+
+                        var selectedOption = opt.getAttribute('data-option');
+                        var optionTextEl = opt.querySelector('.poll-option-text');
+                        var barreraValor = optionTextMap[selectedOption] || (optionTextEl ? optionTextEl.textContent.trim() : selectedOption);
+
+                        capturePostHog('encuesta_respondida', {
+                            barrera_principal: barreraValor
+                        });
+
+                        localStorage.setItem('stability_pain_point', selectedOption);
+                        triggerHaptic([15, 25]);
+                        renderPollState(selectedOption, true);
+
+                        if (pollTimer) clearTimeout(pollTimer);
+
+                        // Pausar temporalmente para que el usuario pueda leer los resultados
+                        setPaused(true);
+
+                        pollTimer = setTimeout(function () {
+                            setPaused(false);
+                            next();
+                        }, 2200);
+                    });
+                });
+            }
+
+            // ---- Acordeón de preguntas frecuentes (FAQ) ----
+            var faqContainer = document.getElementById('faqAccordion');
+            if (faqContainer) {
+                var faqItems = Array.prototype.slice.call(faqContainer.querySelectorAll('.faq-item'));
+                faqItems.forEach(function (item) {
+                    var btn = item.querySelector('.faq-question');
+                    if (!btn) return;
+                    btn.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        var isOpen = item.classList.contains('is-open');
+
+                        faqItems.forEach(function (otherItem) {
+                            otherItem.classList.remove('is-open');
+                            var otherBtn = otherItem.querySelector('.faq-question');
+                            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                        });
+
+                        if (!isOpen) {
+                            item.classList.add('is-open');
+                            btn.setAttribute('aria-expanded', 'true');
+                            triggerHaptic(10);
+                            setPaused(true); // Pausar la historia mientras haya una respuesta desplegada
+                        } else {
+                            setPaused(false); // Reanudar si se cierra la respuesta
+                        }
+                    });
+                });
+            }
+
+            // ---- Contenido de features dinámico según el objetivo elegido en el registro ----
+            function applyObjectiveContent() {
+                var objective = localStorage.getItem('stability_objective');
+                document.querySelectorAll('.slide-content').forEach(function (content) {
+                    var variants = content.querySelectorAll('[data-objective]');
+                    if (!variants.length) return;
+                    var matched = null;
+                    variants.forEach(function (v) {
+                        v.classList.remove('active-objective');
+                        if (v.getAttribute('data-objective') === objective) matched = v;
+                    });
+                    if (!matched) {
+                        variants.forEach(function (v) {
+                            if (v.getAttribute('data-objective') === 'default') matched = v;
+                        });
+                    }
+                    if (matched) matched.classList.add('active-objective');
+                });
+            }
+            applyObjectiveContent();
+
+            // ---- Personalización con el nombre del usuario (máximo 2 menciones en
+            // toda la landing, en las historias de intro a equipo y a testimonios) ----
+            function applyNamePersonalization() {
+                var name = localStorage.getItem('stability_name');
+                var teamGreeting = document.getElementById('teamIntroGreeting');
+                var testiGreeting = document.getElementById('testiIntroGreeting');
+                if (teamGreeting) {
+                    teamGreeting.textContent = name ? (name + ', este es el equipo que te va a acompañar.') : 'Conocé al equipo que te va a acompañar.';
+                }
+                if (testiGreeting) {
+                    testiGreeting.textContent = name ? (name + ', mirá lo que lograron otros alumnos que ya están entrenando con nosotros.') : 'Mirá lo que lograron otros alumnos que ya están entrenando con nosotros.';
+                }
+            }
+            applyNamePersonalization();
+
+            // ---- Rastreo de clics en enlaces de WhatsApp ----
+            document.addEventListener('click', function (e) {
+                var waLink = e.target.closest('a[href*="wa.me"]');
+                if (waLink) {
+                    capturePostHog('whatsapp_link_click', {
+                        ubicacion_cta: 'oferta_final'
+                    });
+                }
+            });
+
+            // ---- Rastreo de abandono de la página / pestaña ----
+            document.addEventListener('visibilitychange', function () {
+                if (document.visibilityState === 'hidden') {
+                    capturePostHog('slide_abandonado', {
+                        slide_final: current + 1
+                    });
+                }
+            });
+
+            // ---- Activar el modo Historia y arrancar en el primer slide ----
+            body.classList.add('js-stories');
+            goTo(0);
+            preloadSlideAssets(0);
+            preloadSlideAssets(1);
+            preloadSlideAssets(2);
+        })();
+    </script>
+</body>
+
+</html>
