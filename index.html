@@ -2524,7 +2524,7 @@
                         <button class="reset-btn interactive" id="contactResetBtn">Enviar otro mensaje</button>
                     </div>
 
-                    <a href="https://wa.me/5493512240889?text=Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Stability"
+                    <a id="finalOfferLink" href="https://wa.me/5493512240889?text=Hola!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Stability"
                         target="_blank" rel="noopener noreferrer" class="btn btn-blue interactive"
                         style="width:100%; margin-top:14px;">
                         <svg viewBox="0 0 24 24">
@@ -2570,11 +2570,24 @@
         (function () {
             'use strict';
 
-            // Numero de WhatsApp del negocio, usado por los 2 lugares del script que
-            // arman un link de wa.me dinamicamente. OJO: tambien aparece igual, pero
-            // como texto fijo (no lo puede leer esta constante), en el <a href> de la
-            // oferta final y en el bloque JSON-LD de SEO — si cambia, actualizar ahi tambien.
+            // Numero de WhatsApp del negocio, usado por los lugares del script que
+            // arman un link de wa.me dinamicamente (incluido el CTA de oferta final,
+            // ver updateFinalOfferLink()). OJO: tambien aparece igual, pero como texto
+            // fijo (no lo puede leer esta constante), en el bloque JSON-LD de SEO —
+            // si cambia, actualizar ahi tambien.
             var WHATSAPP_NUMBER = '5493512240889';
+
+            // Datos fijos de la encuesta (porcentaje a mostrar + etiqueta para
+            // analytics/mensajes), en un solo objeto — si se agrega/saca/renombra
+            // una opcion en el HTML de la encuesta (.poll-option[data-option]), hay
+            // que actualizar esto tambien. Declarado acá arriba (no adentro del
+            // bloque de la encuesta) para que buildFinalOfferMessage() lo pueda usar
+            // sin depender de que ese bloque haya corrido.
+            var POLL_OPTIONS = {
+                tiempo: { percent: 52, label: 'Falta de tiempo' },
+                guia: { percent: 28, label: 'No saber por dónde empezar' },
+                motivacion: { percent: 20, label: 'Falta de constancia o motivación' }
+            };
 
             var body = document.body;
             var storiesViewport = document.getElementById('storiesViewport');
@@ -3166,6 +3179,7 @@
                     checkSavedData();
                     applyObjectiveContent();
                     applyNamePersonalization();
+                    updateFinalOfferLink();
                     if (typeof checkContactSaved === 'function') {
                         checkContactSaved();
                     }
@@ -3186,6 +3200,7 @@
                 checkSavedData();
                 applyObjectiveContent();
                 applyNamePersonalization();
+                updateFinalOfferLink();
                 if (typeof contactNameInput !== 'undefined' && contactNameInput && contactNameInput.value === oldName) {
                     contactNameInput.value = '';
                 }
@@ -3249,16 +3264,7 @@
             if (pollSticker) {
                 var pollOptions = Array.prototype.slice.call(pollSticker.querySelectorAll('.poll-option'));
                 var pollTimer = null;
-
-                // Datos fijos de la encuesta (porcentaje a mostrar + etiqueta para
-                // analytics), en un solo objeto — si se agrega/saca/renombra una
-                // opcion en el HTML de arriba (.poll-option[data-option]), hay que
-                // actualizar esto tambien.
-                var POLL_OPTIONS = {
-                    tiempo: { percent: 52, label: 'Falta de tiempo' },
-                    guia: { percent: 28, label: 'No saber por dónde empezar' },
-                    motivacion: { percent: 20, label: 'Falta de constancia o motivación' }
-                };
+                // POLL_OPTIONS esta declarado mas arriba, a nivel de todo el script.
 
                 function renderPollState(selectedOption, animate) {
                     if (!selectedOption) {
@@ -3315,6 +3321,7 @@
                         });
 
                         localStorage.setItem('stability_pain_point', selectedOption);
+                        updateFinalOfferLink();
                         triggerHaptic([15, 25]);
                         renderPollState(selectedOption, true);
 
@@ -3397,6 +3404,37 @@
                 }
             }
             applyNamePersonalization();
+
+            // ---- Mensaje personalizado del CTA final de WhatsApp ----
+            // Arma el texto usando lo que el usuario ya cargo en esta sesion
+            // (nombre, objetivo, motivo por el que no empezo — de la encuesta),
+            // omitiendo con gracia cualquier dato que falte en vez de dejar
+            // huecos vacios en el mensaje.
+            function buildFinalOfferMessage() {
+                var nombre = (localStorage.getItem('stability_name') || '').trim();
+                var objetivo = (localStorage.getItem('stability_objective') || '').trim();
+                var painKey = localStorage.getItem('stability_pain_point');
+                var causa = (painKey && POLL_OPTIONS[painKey] && POLL_OPTIONS[painKey].label) || '';
+
+                var clauses = [];
+                if (nombre) clauses.push('soy ' + nombre);
+                if (objetivo) clauses.push('mi objetivo es ' + objetivo);
+                if (causa) clauses.push('no empiezo a entrenar por ' + causa);
+
+                if (clauses.length > 1) {
+                    clauses[clauses.length - 1] = 'y ' + clauses[clauses.length - 1];
+                }
+
+                var intro = clauses.length ? ('Hola, ' + clauses.join(', ')) : 'Hola';
+                return intro + '. Quiero saber más de Stability.';
+            }
+
+            function updateFinalOfferLink() {
+                var finalOfferLink = document.getElementById('finalOfferLink');
+                if (!finalOfferLink) return;
+                finalOfferLink.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(buildFinalOfferMessage());
+            }
+            updateFinalOfferLink();
 
             // ---- Rastreo de clics en enlaces de WhatsApp ----
             document.addEventListener('click', function (e) {
