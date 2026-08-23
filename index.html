@@ -2570,12 +2570,20 @@
         (function () {
             'use strict';
 
+            // Numero de WhatsApp del negocio, usado por los 2 lugares del script que
+            // arman un link de wa.me dinamicamente. OJO: tambien aparece igual, pero
+            // como texto fijo (no lo puede leer esta constante), en el <a href> de la
+            // oferta final y en el bloque JSON-LD de SEO — si cambia, actualizar ahi tambien.
+            var WHATSAPP_NUMBER = '5493512240889';
+
             var body = document.body;
             var storiesViewport = document.getElementById('storiesViewport');
             var storyLoader = document.getElementById('storyLoader');
             var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
             var progressEl = document.getElementById('storyProgress');
-            var current = 0;
+            // -1 (no 0): asi el primer goTo(0) real de mas abajo no queda
+            // bloqueado por el guard de "ya estamos ahi" que agrega goTo().
+            var current = -1;
             var holdPaused = false;    // transitorio: tap-zone en long-press, o foco en un campo interactivo
             var manualPaused = false;  // persistente: toggle del botón de pausa del header
             var pointerActive = false; // interno: hay un pointerdown activo en una tap-zone
@@ -2681,6 +2689,7 @@
 
             function goTo(index) {
                 if (index < 0 || index >= slides.length) return;
+                if (index === current) return; // ya estamos ahi — evita re-disparar analytics y reiniciar el timer sin navegar de verdad
                 var prevSlide = slides[current];
                 if (prevSlide) prevSlide.classList.remove('is-active');
 
@@ -2866,8 +2875,11 @@
                 if (target.closest('.interactive') && !pointerActive) setPaused(false);
             });
 
-            // Teclado: flechas para navegar
+            // Teclado: flechas para navegar — pero no si el foco esta en un
+            // campo de texto (ahi las flechas mueven el cursor, no la historia).
             document.addEventListener('keydown', function (e) {
+                var activeTag = document.activeElement && document.activeElement.tagName;
+                if (activeTag === 'INPUT' || activeTag === 'TEXTAREA') return;
                 if (e.key === 'ArrowRight') next();
                 if (e.key === 'ArrowLeft') prev();
             });
@@ -2918,8 +2930,15 @@
                 });
             }
 
-            // Reproducir automáticamente en el primer tap del usuario (requerido por políticas de navegadores)
-            document.addEventListener('pointerdown', function startMusicOnUserAction() {
+            // Reproducir automáticamente en el primer tap del usuario (requerido por políticas de navegadores).
+            // Si ese primer tap es justo el botón de música, no competimos con su propio
+            // click handler — evita que un solo tap arranque Y pause la música en la misma
+            // acción (pointerdown dispara antes que click; sin este chequeo, si el play()
+            // resuelve rápido, el click del botón la vuelve a pausar de inmediato).
+            // Sin {once:true}: si el primer tap fue justo en el botón, seguimos escuchando
+            // hasta el próximo tap en otro lado — si no, la música nunca se autoarrancaría.
+            function startMusicOnUserAction(e) {
+                if (e.target && e.target.closest && e.target.closest('#musicBtn')) return;
                 if (!musicPlaying && bgMusic) {
                     bgMusic.volume = 0.35;
                     bgMusic.play().then(function () {
@@ -2931,7 +2950,8 @@
                     }).catch(function () { });
                 }
                 document.removeEventListener('pointerdown', startMusicOnUserAction);
-            }, { once: true });
+            }
+            document.addEventListener('pointerdown', startMusicOnUserAction);
             document.getElementById('closeBtn').addEventListener('click', function () {
                 goTo(0);
             });
@@ -3045,7 +3065,7 @@
                 capturePostHog('whatsapp_link_click', {
                     ubicacion_cta: 'barra_mensaje'
                 });
-                window.location.href = 'https://wa.me/5493512240889?text=' + encodeURIComponent(text);
+                window.location.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
                 msgInput.value = '';
                 updateMsgSendBtn();
             }
@@ -3080,18 +3100,30 @@
             var bannerObjective = document.getElementById('bannerObjective');
             var resetBtn = document.getElementById('resetBtn');
 
-            function checkSavedData() {
-                var savedName = localStorage.getItem('stability_name');
-                var savedObjective = localStorage.getItem('stability_objective');
-                if (savedName && savedObjective) {
-                    form.style.display = 'none';
-                    bannerName.textContent = savedName;
-                    bannerObjective.textContent = savedObjective;
-                    savedBanner.style.display = 'block';
+            // Patron compartido por los 2 formularios (registro y contacto): si
+            // TODAS las claves de localStorage estan presentes, oculta el
+            // formulario y muestra el banner (relleno por renderSaved); si no,
+            // muestra el formulario (y corre onShowForm, si se paso, para
+            // cualquier preparacion extra puntual de ese formulario).
+            function syncFormBanner(keys, formEl, bannerEl, renderSaved, onShowForm) {
+                var values = keys.map(function (k) { return localStorage.getItem(k); });
+                var allPresent = values.every(function (v) { return !!v; });
+                if (allPresent) {
+                    formEl.style.display = 'none';
+                    renderSaved(values);
+                    bannerEl.style.display = 'block';
                 } else {
-                    form.style.display = 'block';
-                    savedBanner.style.display = 'none';
+                    formEl.style.display = 'block';
+                    bannerEl.style.display = 'none';
+                    if (onShowForm) onShowForm();
                 }
+            }
+
+            function checkSavedData() {
+                syncFormBanner(['stability_name', 'stability_objective'], form, savedBanner, function (values) {
+                    bannerName.textContent = values[0];
+                    bannerObjective.textContent = values[1];
+                });
             }
 
             form.addEventListener('submit', function (e) {
@@ -3109,7 +3141,11 @@
                 }
 
                 var selectedObjectiveBtn = document.querySelector('.objective-btn.selected');
-                var objectiveVal = (userObjectiveInput.value ? userObjectiveInput.value.trim() : '') || (selectedObjectiveBtn ? (selectedObjectiveBtn.getAttribute('data-value') || selectedObjectiveBtn.textContent.trim()) : '') || localStorage.getItem('stability_objective') || '';
+                // Ojo: NO cae a localStorage aca — si cayera, un desincronismo entre
+                // 'stability_name' y 'stability_objective' (name ausente, objective
+                // viejo todavia guardado) dejaria pasar la validacion con un objetivo
+                // que el usuario nunca eligio en esta sesion, sin haber tocado ningun boton.
+                var objectiveVal = (userObjectiveInput.value ? userObjectiveInput.value.trim() : '') || (selectedObjectiveBtn ? (selectedObjectiveBtn.getAttribute('data-value') || selectedObjectiveBtn.textContent.trim()) : '');
                 if (objectiveVal && !userObjectiveInput.value) {
                     userObjectiveInput.value = objectiveVal;
                 }
@@ -3169,20 +3205,14 @@
             var contactResetBtn = document.getElementById('contactResetBtn');
 
             function checkContactSaved() {
-                var savedName = localStorage.getItem('stability_contact_name');
-                var savedComment = localStorage.getItem('stability_contact_comment');
-                if (savedName && savedComment) {
-                    contactForm.style.display = 'none';
-                    contactSavedText.textContent = '¡Gracias, ' + savedName + '! El equipo de Stability se va a comunicar con vos.';
-                    contactSavedBanner.style.display = 'block';
-                } else {
-                    contactForm.style.display = 'block';
-                    contactSavedBanner.style.display = 'none';
+                syncFormBanner(['stability_contact_name', 'stability_contact_comment'], contactForm, contactSavedBanner, function (values) {
+                    contactSavedText.textContent = '¡Gracias, ' + values[0] + '! El equipo de Stability se va a comunicar con vos.';
+                }, function () {
                     if (!contactNameInput.value) {
                         var registeredName = localStorage.getItem('stability_name');
                         if (registeredName) contactNameInput.value = registeredName;
                     }
-                }
+                });
             }
 
             contactForm.addEventListener('submit', function (e) {
@@ -3200,7 +3230,7 @@
                 });
 
                 var wspMessage = 'Hola, soy ' + nameVal + '. ' + commentVal;
-                var wspUrl = 'https://wa.me/5493512240889?text=' + encodeURIComponent(wspMessage);
+                var wspUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(wspMessage);
                 window.location.href = wspUrl;
             });
 
@@ -3220,11 +3250,14 @@
                 var pollOptions = Array.prototype.slice.call(pollSticker.querySelectorAll('.poll-option'));
                 var pollTimer = null;
 
-                // Porcentajes fijos para la encuesta
-                var fixedPercentages = {
-                    tiempo: 52,
-                    guia: 28,
-                    motivacion: 20
+                // Datos fijos de la encuesta (porcentaje a mostrar + etiqueta para
+                // analytics), en un solo objeto — si se agrega/saca/renombra una
+                // opcion en el HTML de arriba (.poll-option[data-option]), hay que
+                // actualizar esto tambien.
+                var POLL_OPTIONS = {
+                    tiempo: { percent: 52, label: 'Falta de tiempo' },
+                    guia: { percent: 28, label: 'No saber por dónde empezar' },
+                    motivacion: { percent: 20, label: 'Falta de constancia o motivación' }
                 };
 
                 function renderPollState(selectedOption, animate) {
@@ -3247,7 +3280,7 @@
                         var isThisSelected = (optName === selectedOption);
                         o.classList.toggle('selected', isThisSelected);
 
-                        var percent = fixedPercentages[optName] || 0;
+                        var percent = (POLL_OPTIONS[optName] && POLL_OPTIONS[optName].percent) || 0;
                         var fill = o.querySelector('.poll-option-fill');
                         var percentText = o.querySelector('.poll-option-percent');
 
@@ -3269,19 +3302,13 @@
                     renderPollState(savedPain, false);
                 }
 
-                var optionTextMap = {
-                    'tiempo': 'Falta de tiempo',
-                    'guia': 'No saber por dónde empezar',
-                    'motivacion': 'Falta de constancia o motivación'
-                };
-
                 pollOptions.forEach(function (opt) {
                     opt.addEventListener('click', function (e) {
                         e.stopPropagation(); // Evitar que el click se propague al viewport
 
                         var selectedOption = opt.getAttribute('data-option');
                         var optionTextEl = opt.querySelector('.poll-option-text');
-                        var barreraValor = optionTextMap[selectedOption] || (optionTextEl ? optionTextEl.textContent.trim() : selectedOption);
+                        var barreraValor = (POLL_OPTIONS[selectedOption] && POLL_OPTIONS[selectedOption].label) || (optionTextEl ? optionTextEl.textContent.trim() : selectedOption);
 
                         capturePostHog('encuesta_respondida', {
                             barrera_principal: barreraValor
@@ -3298,7 +3325,9 @@
 
                         pollTimer = setTimeout(function () {
                             setPaused(false);
-                            next();
+                            // Si el usuario pauso manualmente (boton de pausa), respetamos
+                            // esa pausa y no avanzamos solos.
+                            if (!manualPaused) next();
                         }, 2200);
                     });
                 });
